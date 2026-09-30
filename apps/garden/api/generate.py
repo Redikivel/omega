@@ -133,6 +133,21 @@ class handler(BaseHTTPRequestHandler):
         try:
             raw_plants = fetch_perenual(query)
             plants = [p for p in (map_plant(item) for item in raw_plants) if p]
+
+            # DEBUG: temporäres Logging, um zu unterscheiden, ob Perenual
+            # 0 Rohtreffer liefert oder ob map_plant() alle Treffer wegen
+            # eines unerwarteten "watering"-Werts herausfiltert.
+            # Sichtbar in den Vercel Function Logs (nicht im Access-Log).
+            if not plants:
+                sample = [
+                    {"common_name": it.get("common_name"), "watering": it.get("watering")}
+                    for it in raw_plants[:5]
+                ]
+                print(
+                    f"[generate.py] query={query!r} raw_count={len(raw_plants)} "
+                    f"filtered_count=0 sample_watering={sample}"
+                )
+
             self._send_json({"plants": plants})
 
         except ValueError as e:
