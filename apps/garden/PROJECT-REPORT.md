@@ -2,6 +2,8 @@
 
 > **Update:** The Perenual integration (`api/generate.py`, `vercel.json`) has since been removed. Plant search now runs fully client-side against the local catalog `data/plants.json` (see `data/README.md`); users can pick or override the watering need, with the catalog value marked as recommended. Sections below describing the API reflect the state at the time of the audit.
 
+> **Update 2:** The milestone recommended in section 10 is now implemented. Storage moved to `schemaVersion: 2` with a separate top-level `careEvents` array (one event per watering, `type` field included for later `fertilize`/`repot`), migrated automatically from v1 with a raw backup under `omega_garden_v1_backup`. Watering creates an event and can be undone from the toast; deleting a plant also removes its events. A dedicated detail/profile view (added earlier) now shows the watering history and the average interval. The daily decay additionally uses a monthly seasonal factor driven by the catalog's `winterRest` flag (northern hemisphere only — see `data/README.md`). Remaining gaps from sections 6/7: actionable reminders outside the app, durable/shared data, and the additive (rather than multiplicative) light adjustment.
+
 ## Scope and evidence
 
 This report describes the tracked code in `apps/garden` as it exists in this repository. The Garden app consists of `index.html`, `app.js`, `style.css`, `api/generate.py`, and `vercel.json`. No Garden-specific README, package manifest, dependency lockfile, database schema, migration, or test files are present in the tracked repository. The repository root `README.md` is empty. The separate `apps/cv` application is not part of Garden's implementation.

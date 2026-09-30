@@ -1025,6 +1025,48 @@ body {
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.toast-action {
+  margin-left: 14px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--green-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.toast-action:hover { text-decoration: underline; }
+
+/* ── Care history ──────────────────────────────────────── */
+.detail-section-title {
+  margin: 20px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+.detail-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.detail-history li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-1);
+}
+.detail-history li:last-child { border-bottom: none; }
+.detail-history time {
+  margin-left: auto;
+  color: var(--text-2);
+  font-size: 12px;
 }
 
 /* ── Loading skeleton ──────────────────────────────────── */

@@ -57,7 +57,41 @@ Eine Zeile pro Eintrag, damit Git-Diffs lesbar bleiben.
   `user` = eigene Wahl, `null` = nicht gesetzt). Katalogfakten wie `family`,
   `environment` und `winterRest` werden in der Detailansicht über `catalogId`
   nachgeschlagen statt kopiert, damit Katalogkorrekturen und
-  Sensor-Schwellwerte zugeordnet werden können.
+  Sensor-Schwellwerte zugeordnet werden können. `loadCatalog()` füllt dafür
+  zusätzlich die Map `catalogById`, weil der Jahreszeit-Faktor `winterRest`
+  synchron in jedem Render braucht.
+
+## Jahreszeit-Faktor
+
+`winterRest` ist seit der Pflege-Historie nicht mehr nur Anzeige, sondern
+steuert die Gießrate: `getDailyDecay()` multipliziert den Grundwert mit einem
+Monatsfaktor (`SEASON_FACTOR` in `app.js`). Pflanzen mit `winterRest: true`
+werden im Winter stärker gedrosselt (bis 0,60) als immergrüne (bis 0,85).
+
+**Bekannte Einschränkung:** Die Faktoren gehen von der **Nordhalbkugel** aus.
+Für die Südhalbkugel müsste der Monatsindex um 6 verschoben werden – das
+erfordert eine Ortsangabe pro Nutzer und ist bewusst offen gelassen.
+
+## Pflege-Historie (`localStorage`)
+
+Gießvorgänge liegen seit `schemaVersion: 2` in einem eigenen Top-Level-Array,
+getrennt von den Pflanzen – analog zu einer späteren `care_events`-Tabelle:
+
+```json
+{ "schemaVersion": 2, "lang": "de", "plants": [ … ],
+  "careEvents": [ { "id": "…", "plantId": "…", "type": "water", "at": "ISO" } ] }
+```
+
+- `type` ist von Anfang an vorhanden, damit `fertilize`/`repot` später ohne
+  Schema-Änderung passen. Sensor-Messwerte kämen in ein **eigenes** Array.
+- `plant.lastWateredAt` bleibt als Cache bestehen, weil `getCurrentWaterLevel()`
+  für jede Pflanze bei jedem Render läuft; die Events sind die Quelle der
+  Wahrheit und werden bei jedem Schreibvorgang gespiegelt.
+- Die Migration von v1 legt pro Pflanze ein Event aus `lastWateredAt` an und
+  sichert die Rohdaten vorher unter `omega_garden_v1_backup`.
+- **Noch offen:** kein Pruning. ~85 Byte pro Event, 20 Pflanzen × 2×/Woche × 5
+  Jahre ≈ 0,9 MB von ~5 MB Budget – unkritisch, aber vor einem Multi-User-Sync
+  zu klären.
 
 ## Zukunft (Sensoren / Datenbank)
 

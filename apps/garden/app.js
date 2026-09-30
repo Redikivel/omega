@@ -26,7 +26,7 @@ const TRANSLATIONS = {
     toastWatered: '💧 Gegossen!', toastAdded: '🌱 Pflanze hinzugefügt!',
     toastDeleted: '🗑 Pflanze gelöscht.', toastSaved: '✓ Gespeichert.',
     searchPlantAPI: 'Pflanze suchen, z.B. Monstera…',
-    noWaterInfo: 'Keine Pflegedaten zu dieser Pflanze gefunden. Du kannst sie trotzdem mit eigenen Angaben anlegen.', createCustom: '+ Eigene Pflanze anlegen', wateringNeed: 'Gießbedarf', waterLow: 'Wenig', waterMedium: 'Mittel', waterHigh: 'Viel', recommended: '(empfohlen)', chooseWatering: 'Bitte Gießbedarf auswählen.', lightNeed: 'Lichtbedarf', lightFull: 'Sonnig', lightPart: 'Halbschatten', lightLow: 'Schatten', edit: 'Bearbeiten', lastWatered: 'Zuletzt gegossen', nextWatering: 'Nächstes Gießen', family: 'Familie', winterRest: 'Winterruhe', yes: 'Ja', no: 'Nein', envLabel: 'Standorttyp', envIndoor: 'Drinnen', envOutdoor: 'Draußen', envBoth: 'Drinnen & draußen', addedAt: 'Hinzugefügt am', srcCatalog: 'Katalog', srcUser: 'Eigene Angabe', waterEstimate: 'Schätzwert aus Gießbedarf, Licht und Topfgröße – kein Messwert.',
+    noWaterInfo: 'Keine Pflegedaten zu dieser Pflanze gefunden. Du kannst sie trotzdem mit eigenen Angaben anlegen.', createCustom: '+ Eigene Pflanze anlegen', wateringNeed: 'Gießbedarf', waterLow: 'Wenig', waterMedium: 'Mittel', waterHigh: 'Viel', recommended: '(empfohlen)', chooseWatering: 'Bitte Gießbedarf auswählen.', lightNeed: 'Lichtbedarf', lightFull: 'Sonnig', lightPart: 'Halbschatten', lightLow: 'Schatten', edit: 'Bearbeiten', lastWatered: 'Zuletzt gegossen', nextWatering: 'Nächstes Gießen', family: 'Familie', winterRest: 'Winterruhe', yes: 'Ja', no: 'Nein', envLabel: 'Standorttyp', envIndoor: 'Drinnen', envOutdoor: 'Draußen', envBoth: 'Drinnen & draußen', addedAt: 'Hinzugefügt am', srcCatalog: 'Katalog', srcUser: 'Eigene Angabe', waterEstimate: 'Schätzwert aus Gießbedarf, Licht, Topfgröße und Jahreszeit – kein Messwert.', undo: 'Rückgängig', toastUndone: '↩ Rückgängig gemacht.', history: 'Verlauf', noHistory: 'Noch kein Gießen erfasst.', avgInterval: 'Ø Gießabstand', everyXDays: 'alle {d} Tage', waterEvent: 'Gegossen', seasonFactor: 'Jahreszeit',
     searchError: 'Fehler beim Laden der Daten. Bitte später erneut versuchen.',
   },
   en: {
@@ -47,7 +47,7 @@ const TRANSLATIONS = {
     toastWatered: '💧 Watered!', toastAdded: '🌱 Plant added!',
     toastDeleted: '🗑 Plant deleted.', toastSaved: '✓ Saved.',
     searchPlantAPI: 'Search plant, e.g. Monstera…',
-    noWaterInfo: 'No care data found for this plant. You can still add it with your own settings.', createCustom: '+ Add custom plant', wateringNeed: 'Watering need', waterLow: 'Low', waterMedium: 'Medium', waterHigh: 'High', recommended: '(recommended)', chooseWatering: 'Please choose a watering need.', lightNeed: 'Light need', lightFull: 'Full sun', lightPart: 'Partial shade', lightLow: 'Shade', edit: 'Edit', lastWatered: 'Last watered', nextWatering: 'Next watering', family: 'Family', winterRest: 'Winter rest', yes: 'Yes', no: 'No', envLabel: 'Environment', envIndoor: 'Indoor', envOutdoor: 'Outdoor', envBoth: 'Indoor & outdoor', addedAt: 'Added', srcCatalog: 'Catalog', srcUser: 'Own setting', waterEstimate: 'Estimate based on watering need, light and pot size – not a measurement.',
+    noWaterInfo: 'No care data found for this plant. You can still add it with your own settings.', createCustom: '+ Add custom plant', wateringNeed: 'Watering need', waterLow: 'Low', waterMedium: 'Medium', waterHigh: 'High', recommended: '(recommended)', chooseWatering: 'Please choose a watering need.', lightNeed: 'Light need', lightFull: 'Full sun', lightPart: 'Partial shade', lightLow: 'Shade', edit: 'Edit', lastWatered: 'Last watered', nextWatering: 'Next watering', family: 'Family', winterRest: 'Winter rest', yes: 'Yes', no: 'No', envLabel: 'Environment', envIndoor: 'Indoor', envOutdoor: 'Outdoor', envBoth: 'Indoor & outdoor', addedAt: 'Added', srcCatalog: 'Catalog', srcUser: 'Own setting', waterEstimate: 'Estimate based on watering need, light, pot size and season – not a measurement.', undo: 'Undo', toastUndone: '↩ Undone.', history: 'History', noHistory: 'No watering recorded yet.', avgInterval: 'Avg. interval', everyXDays: 'every {d} days', waterEvent: 'Watered', seasonFactor: 'Season',
     searchError: 'Error loading data. Please try again later.',
   },
   fr: {
@@ -66,7 +66,7 @@ const TRANSLATIONS = {
     noResults: 'Aucune plante trouvée.', loading: 'Recherche…',
     toastWatered: '💧 Arrosée !', toastAdded: '🌱 Plante ajoutée !',
     toastDeleted: '🗑 Plante supprimée.', toastSaved: '✓ Sauvegardé.',
-    searchPlantAPI: 'Chercher une plante…', noWaterInfo: 'Aucune donnée d\'entretien trouvée. Vous pouvez quand même l\'ajouter avec vos propres réglages.', createCustom: '+ Ajouter une plante personnalisée', wateringNeed: 'Besoin en eau', waterLow: 'Faible', waterMedium: 'Moyen', waterHigh: 'Élevé', recommended: '(recommandé)', chooseWatering: 'Veuillez choisir un besoin en eau.', lightNeed: 'Besoin en lumière', lightFull: 'Plein soleil', lightPart: 'Mi-ombre', lightLow: 'Ombre', edit: 'Modifier', lastWatered: 'Dernier arrosage', nextWatering: 'Prochain arrosage', family: 'Famille', winterRest: 'Repos hivernal', yes: 'Oui', no: 'Non', envLabel: 'Environnement', envIndoor: 'Intérieur', envOutdoor: 'Extérieur', envBoth: 'Intérieur & extérieur', addedAt: 'Ajoutée le', srcCatalog: 'Catalogue', srcUser: 'Réglage personnel', waterEstimate: 'Estimation basée sur le besoin en eau, la lumière et la taille du pot – pas une mesure.',
+    searchPlantAPI: 'Chercher une plante…', noWaterInfo: 'Aucune donnée d\'entretien trouvée. Vous pouvez quand même l\'ajouter avec vos propres réglages.', createCustom: '+ Ajouter une plante personnalisée', wateringNeed: 'Besoin en eau', waterLow: 'Faible', waterMedium: 'Moyen', waterHigh: 'Élevé', recommended: '(recommandé)', chooseWatering: 'Veuillez choisir un besoin en eau.', lightNeed: 'Besoin en lumière', lightFull: 'Plein soleil', lightPart: 'Mi-ombre', lightLow: 'Ombre', edit: 'Modifier', lastWatered: 'Dernier arrosage', nextWatering: 'Prochain arrosage', family: 'Famille', winterRest: 'Repos hivernal', yes: 'Oui', no: 'Non', envLabel: 'Environnement', envIndoor: 'Intérieur', envOutdoor: 'Extérieur', envBoth: 'Intérieur & extérieur', addedAt: 'Ajoutée le', srcCatalog: 'Catalogue', srcUser: 'Réglage personnel', waterEstimate: 'Estimation basée sur le besoin en eau, la lumière, la taille du pot et la saison – pas une mesure.', undo: 'Annuler', toastUndone: '↩ Annulé.', history: 'Historique', noHistory: 'Aucun arrosage enregistré.', avgInterval: 'Intervalle moyen', everyXDays: 'tous les {d} jours', waterEvent: 'Arrosée', seasonFactor: 'Saison',
     searchError: 'Erreur de chargement des données. Réessayez plus tard.',
   },
   es: {
@@ -85,7 +85,7 @@ const TRANSLATIONS = {
     noResults: 'No se encontraron plantas.', loading: 'Buscando…',
     toastWatered: '💧 ¡Regada!', toastAdded: '🌱 ¡Planta añadida!',
     toastDeleted: '🗑 Planta eliminada.', toastSaved: '✓ Guardado.',
-    searchPlantAPI: 'Buscar planta…', noWaterInfo: 'No se encontraron datos de cuidado. Puedes añadirla igualmente con tus propios ajustes.', createCustom: '+ Añadir planta personalizada', wateringNeed: 'Necesidad de riego', waterLow: 'Baja', waterMedium: 'Media', waterHigh: 'Alta', recommended: '(recomendado)', chooseWatering: 'Elige una necesidad de riego.', lightNeed: 'Necesidad de luz', lightFull: 'Pleno sol', lightPart: 'Semisombra', lightLow: 'Sombra', edit: 'Editar', lastWatered: 'Último riego', nextWatering: 'Próximo riego', family: 'Familia', winterRest: 'Reposo invernal', yes: 'Sí', no: 'No', envLabel: 'Entorno', envIndoor: 'Interior', envOutdoor: 'Exterior', envBoth: 'Interior y exterior', addedAt: 'Añadida el', srcCatalog: 'Catálogo', srcUser: 'Ajuste propio', waterEstimate: 'Estimación basada en riego, luz y tamaño de maceta; no es una medición.',
+    searchPlantAPI: 'Buscar planta…', noWaterInfo: 'No se encontraron datos de cuidado. Puedes añadirla igualmente con tus propios ajustes.', createCustom: '+ Añadir planta personalizada', wateringNeed: 'Necesidad de riego', waterLow: 'Baja', waterMedium: 'Media', waterHigh: 'Alta', recommended: '(recomendado)', chooseWatering: 'Elige una necesidad de riego.', lightNeed: 'Necesidad de luz', lightFull: 'Pleno sol', lightPart: 'Semisombra', lightLow: 'Sombra', edit: 'Editar', lastWatered: 'Último riego', nextWatering: 'Próximo riego', family: 'Familia', winterRest: 'Reposo invernal', yes: 'Sí', no: 'No', envLabel: 'Entorno', envIndoor: 'Interior', envOutdoor: 'Exterior', envBoth: 'Interior y exterior', addedAt: 'Añadida el', srcCatalog: 'Catálogo', srcUser: 'Ajuste propio', waterEstimate: 'Estimación basada en riego, luz, tamaño de maceta y estación; no es una medición.', undo: 'Deshacer', toastUndone: '↩ Deshecho.', history: 'Historial', noHistory: 'Aún no hay riegos registrados.', avgInterval: 'Intervalo medio', everyXDays: 'cada {d} días', waterEvent: 'Regada', seasonFactor: 'Estación',
     searchError: 'Error al cargar los datos. Inténtalo más tarde.',
   },
   pt: {
@@ -104,19 +104,20 @@ const TRANSLATIONS = {
     noResults: 'Nenhuma planta encontrada.', loading: 'Pesquisando…',
     toastWatered: '💧 Regada!', toastAdded: '🌱 Planta adicionada!',
     toastDeleted: '🗑 Planta excluída.', toastSaved: '✓ Salvo.',
-    searchPlantAPI: 'Pesquisar planta…', noWaterInfo: 'Nenhum dado de cuidado encontrado. Você ainda pode adicioná-la com suas próprias configurações.', createCustom: '+ Adicionar planta personalizada', wateringNeed: 'Necessidade de rega', waterLow: 'Baixa', waterMedium: 'Média', waterHigh: 'Alta', recommended: '(recomendado)', chooseWatering: 'Escolha uma necessidade de rega.', lightNeed: 'Necessidade de luz', lightFull: 'Sol pleno', lightPart: 'Meia-sombra', lightLow: 'Sombra', edit: 'Editar', lastWatered: 'Última rega', nextWatering: 'Próxima rega', family: 'Família', winterRest: 'Repouso de inverno', yes: 'Sim', no: 'Não', envLabel: 'Ambiente', envIndoor: 'Interior', envOutdoor: 'Exterior', envBoth: 'Interior e exterior', addedAt: 'Adicionada em', srcCatalog: 'Catálogo', srcUser: 'Configuração própria', waterEstimate: 'Estimativa baseada na rega, luz e tamanho do vaso – não é uma medição.',
+    searchPlantAPI: 'Pesquisar planta…', noWaterInfo: 'Nenhum dado de cuidado encontrado. Você ainda pode adicioná-la com suas próprias configurações.', createCustom: '+ Adicionar planta personalizada', wateringNeed: 'Necessidade de rega', waterLow: 'Baixa', waterMedium: 'Média', waterHigh: 'Alta', recommended: '(recomendado)', chooseWatering: 'Escolha uma necessidade de rega.', lightNeed: 'Necessidade de luz', lightFull: 'Sol pleno', lightPart: 'Meia-sombra', lightLow: 'Sombra', edit: 'Editar', lastWatered: 'Última rega', nextWatering: 'Próxima rega', family: 'Família', winterRest: 'Repouso de inverno', yes: 'Sim', no: 'Não', envLabel: 'Ambiente', envIndoor: 'Interior', envOutdoor: 'Exterior', envBoth: 'Interior e exterior', addedAt: 'Adicionada em', srcCatalog: 'Catálogo', srcUser: 'Configuração própria', waterEstimate: 'Estimativa baseada na rega, luz, tamanho do vaso e estação – não é uma medição.', undo: 'Desfazer', toastUndone: '↩ Desfeito.', history: 'Histórico', noHistory: 'Nenhuma rega registrada ainda.', avgInterval: 'Intervalo médio', everyXDays: 'a cada {d} dias', waterEvent: 'Regada', seasonFactor: 'Estação',
     searchError: 'Erro ao carregar dados. Tente novamente mais tarde.',
   },
-  it: { add:'Aggiungi pianta',today:'Oggi · Hanno bisogno d\'acqua',noWater:'Tutte le piante sono curate 🌿',searchPlants:'Cerca piante…',all:'Tutte',needsWater:'Hanno bisogno d\'acqua',emptyTitle:'Nessuna pianta',emptySub:'Aggiungi la tua prima pianta.',addPlant:'Aggiungi pianta',stepSearch:'Cerca',stepSelect:'Seleziona',stepConfigure:'Configura',searchHint:'Digita almeno 2 caratteri…',back:'← Indietro',customName:'Il mio nome per questa pianta',location:'Posizione (opzionale)',potSize:'Dimensione vaso',small:'Piccolo',medium:'Medio',large:'Grande',addPlantConfirm:'Aggiungi pianta',editPlant:'Modifica pianta',delete:'Elimina',save:'Salva',watered:'Annaffiata ✓',waterBtn:'💧 Annaffia',healthy:'In salute',waterSoon:'Annaffia presto',needsWaterStatus:'Ha bisogno d\'acqua',water:'Acqua',locationLabel:'Posizione',noResults:'Nessuna pianta trovata.',loading:'Ricerca…',toastWatered:'💧 Annaffiata!',toastAdded:'🌱 Pianta aggiunta!',toastDeleted:'🗑 Pianta eliminata.',toastSaved:'✓ Salvato.',searchPlantAPI:'Cerca pianta…',noWaterInfo:'Nessun dato di cura trovato. Puoi comunque aggiungerla con le tue impostazioni.',createCustom:'+ Aggiungi pianta personalizzata',wateringNeed:'Fabbisogno idrico',waterLow:'Basso',waterMedium:'Medio',waterHigh:'Alto',recommended:'(consigliato)',chooseWatering:'Scegli un fabbisogno idrico.',lightNeed:'Fabbisogno di luce',lightFull:'Pieno sole',lightPart:'Mezz\'ombra',lightLow:'Ombra',edit:'Modifica',lastWatered:'Ultima annaffiatura',nextWatering:'Prossima annaffiatura',family:'Famiglia',winterRest:'Riposo invernale',yes:'Sì',no:'No',envLabel:'Ambiente',envIndoor:'Interno',envOutdoor:'Esterno',envBoth:'Interno ed esterno',addedAt:'Aggiunta il',srcCatalog:'Catalogo',srcUser:'Impostazione propria',waterEstimate:'Stima basata su fabbisogno idrico, luce e dimensione del vaso – non è una misura.',searchError:'Errore nel caricamento dei dati. Riprova più tardi.' },
-  nl: { add:'Plant toevoegen',today:'Vandaag · Water nodig',noWater:'Alle planten zijn verzorgd 🌿',searchPlants:'Zoek planten…',all:'Alle',needsWater:'Water nodig',emptyTitle:'Nog geen planten',emptySub:'Voeg je eerste plant toe om te beginnen.',addPlant:'Plant toevoegen',stepSearch:'Zoeken',stepSelect:'Selecteren',stepConfigure:'Configureren',searchHint:'Typ minimaal 2 tekens…',back:'← Terug',customName:'Mijn naam voor deze plant',location:'Locatie (optioneel)',potSize:'Potmaat',small:'Klein',medium:'Medium',large:'Groot',addPlantConfirm:'Plant toevoegen',editPlant:'Plant bewerken',delete:'Verwijderen',save:'Opslaan',watered:'Gegoten ✓',waterBtn:'💧 Gieten',healthy:'Gezond',waterSoon:'Binnenkort gieten',needsWaterStatus:'Heeft water nodig',water:'Water',locationLabel:'Locatie',noResults:'Geen planten gevonden.',loading:'Zoeken…',toastWatered:'💧 Gegoten!',toastAdded:'🌱 Plant toegevoegd!',toastDeleted:'🗑 Plant verwijderd.',toastSaved:'✓ Opgeslagen.',searchPlantAPI:'Plant zoeken…',noWaterInfo:'Geen verzorgingsgegevens gevonden. Je kunt de plant toch toevoegen met eigen instellingen.',createCustom:'+ Eigen plant toevoegen',wateringNeed:'Waterbehoefte',waterLow:'Laag',waterMedium:'Gemiddeld',waterHigh:'Hoog',recommended:'(aanbevolen)',chooseWatering:'Kies een waterbehoefte.',lightNeed:'Lichtbehoefte',lightFull:'Volle zon',lightPart:'Halfschaduw',lightLow:'Schaduw',edit:'Bewerken',lastWatered:'Laatst gegoten',nextWatering:'Volgende gietbeurt',family:'Familie',winterRest:'Winterrust',yes:'Ja',no:'Nee',envLabel:'Omgeving',envIndoor:'Binnen',envOutdoor:'Buiten',envBoth:'Binnen & buiten',addedAt:'Toegevoegd op',srcCatalog:'Catalogus',srcUser:'Eigen instelling',waterEstimate:'Schatting op basis van waterbehoefte, licht en potmaat – geen meting.',searchError:'Fout bij het laden van gegevens. Probeer het later opnieuw.' },
-  pl: { add:'Dodaj roślinę',today:'Dziś · Wymagają podlewania',noWater:'Wszystkie rośliny są zadbane 🌿',searchPlants:'Szukaj roślin…',all:'Wszystkie',needsWater:'Wymagają wody',emptyTitle:'Brak roślin',emptySub:'Dodaj pierwszą roślinę, aby rozpocząć.',addPlant:'Dodaj roślinę',stepSearch:'Szukaj',stepSelect:'Wybierz',stepConfigure:'Skonfiguruj',searchHint:'Wpisz co najmniej 2 znaki…',back:'← Wróć',customName:'Moja nazwa rośliny',location:'Lokalizacja (opcjonalnie)',potSize:'Rozmiar doniczki',small:'Mała',medium:'Średnia',large:'Duża',addPlantConfirm:'Dodaj roślinę',editPlant:'Edytuj roślinę',delete:'Usuń',save:'Zapisz',watered:'Podlana ✓',waterBtn:'💧 Podlej',healthy:'Zdrowa',waterSoon:'Wkrótce podlej',needsWaterStatus:'Potrzebuje wody',water:'Woda',locationLabel:'Lokalizacja',noResults:'Nie znaleziono roślin.',loading:'Szukam…',toastWatered:'💧 Podlana!',toastAdded:'🌱 Roślina dodana!',toastDeleted:'🗑 Roślina usunięta.',toastSaved:'✓ Zapisano.',searchPlantAPI:'Szukaj rośliny…',noWaterInfo:'Nie znaleziono danych pielęgnacyjnych. Nadal możesz dodać roślinę z własnymi ustawieniami.',createCustom:'+ Dodaj własną roślinę',wateringNeed:'Zapotrzebowanie na wodę',waterLow:'Niskie',waterMedium:'Średnie',waterHigh:'Wysokie',recommended:'(zalecane)',chooseWatering:'Wybierz zapotrzebowanie na wodę.',lightNeed:'Zapotrzebowanie na światło',lightFull:'Pełne słońce',lightPart:'Półcień',lightLow:'Cień',edit:'Edytuj',lastWatered:'Ostatnie podlewanie',nextWatering:'Następne podlewanie',family:'Rodzina',winterRest:'Spoczynek zimowy',yes:'Tak',no:'Nie',envLabel:'Środowisko',envIndoor:'Wewnątrz',envOutdoor:'Na zewnątrz',envBoth:'Wewnątrz i na zewnątrz',addedAt:'Dodano',srcCatalog:'Katalog',srcUser:'Własne ustawienie',waterEstimate:'Szacunek na podstawie zapotrzebowania na wodę, światła i rozmiaru doniczki – nie pomiar.',searchError:'Błąd ładowania danych. Spróbuj ponownie później.' },
-  ja: { add:'植物を追加',today:'今日・水やりが必要',noWater:'すべての植物は管理済みです 🌿',searchPlants:'植物を検索…',all:'すべて',needsWater:'水やりが必要',emptyTitle:'植物がありません',emptySub:'最初の植物を追加してください。',addPlant:'植物を追加',stepSearch:'検索',stepSelect:'選択',stepConfigure:'設定',searchHint:'2文字以上入力…',back:'← 戻る',customName:'植物の名前',location:'場所（任意）',potSize:'鉢のサイズ',small:'小',medium:'中',large:'大',addPlantConfirm:'植物を追加',editPlant:'植物を編集',delete:'削除',save:'保存',watered:'水やり済み ✓',waterBtn:'💧 水やり',healthy:'健康',waterSoon:'もうすぐ水やり',needsWaterStatus:'水が必要',water:'水',locationLabel:'場所',noResults:'植物が見つかりません。',loading:'検索中…',toastWatered:'💧 水やりしました！',toastAdded:'🌱 植物を追加しました！',toastDeleted:'🗑 植物を削除しました。',toastSaved:'✓ 保存しました。',searchPlantAPI:'植物を検索…',noWaterInfo:'お手入れデータが見つかりません。独自の設定で追加できます。',createCustom:'+ カスタム植物を追加',wateringNeed:'水やりの必要量',waterLow:'少',waterMedium:'中',waterHigh:'多',recommended:'（おすすめ）',chooseWatering:'水やりの必要量を選択してください。',lightNeed:'日照の必要量',lightFull:'日なた',lightPart:'半日陰',lightLow:'日陰',edit:'編集',lastWatered:'最後の水やり',nextWatering:'次の水やり',family:'科',winterRest:'冬の休眠',yes:'はい',no:'いいえ',envLabel:'環境',envIndoor:'屋内',envOutdoor:'屋外',envBoth:'屋内・屋外',addedAt:'追加日',srcCatalog:'カタログ',srcUser:'独自設定',waterEstimate:'水やり・日照・鉢のサイズからの推定値（測定値ではありません）。',searchError:'データの読み込みに失敗しました。後でもう一度お試しください。' },
-  zh: { add:'添加植物',today:'今天・需要浇水',noWater:'所有植物都已照料好 🌿',searchPlants:'搜索植物…',all:'全部',needsWater:'需要浇水',emptyTitle:'还没有植物',emptySub:'添加您的第一株植物以开始。',addPlant:'添加植物',stepSearch:'搜索',stepSelect:'选择',stepConfigure:'配置',searchHint:'请输入至少2个字符…',back:'← 返回',customName:'我给这株植物起的名字',location:'位置（可选）',potSize:'花盆大小',small:'小',medium:'中',large:'大',addPlantConfirm:'添加植物',editPlant:'编辑植物',delete:'删除',save:'保存',watered:'已浇水 ✓',waterBtn:'💧 浇水',healthy:'健康',waterSoon:'即将浇水',needsWaterStatus:'需要浇水',water:'水',locationLabel:'位置',noResults:'未找到植物。',loading:'搜索中…',toastWatered:'💧 已浇水！',toastAdded:'🌱 植物已添加！',toastDeleted:'🗑 植物已删除。',toastSaved:'✓ 已保存。',searchPlantAPI:'搜索植物…',noWaterInfo:'未找到养护数据。您仍可以使用自己的设置添加。',createCustom:'+ 添加自定义植物',wateringNeed:'需水量',waterLow:'少',waterMedium:'中',waterHigh:'多',recommended:'（推荐）',chooseWatering:'请选择需水量。',lightNeed:'光照需求',lightFull:'全日照',lightPart:'半阴',lightLow:'阴凉',edit:'编辑',lastWatered:'上次浇水',nextWatering:'下次浇水',family:'科',winterRest:'冬季休眠',yes:'是',no:'否',envLabel:'环境',envIndoor:'室内',envOutdoor:'室外',envBoth:'室内和室外',addedAt:'添加于',srcCatalog:'目录',srcUser:'自定义设置',waterEstimate:'根据需水量、光照和花盆大小估算，并非实测值。',searchError:'加载数据失败，请稍后重试。' },
+  it: { add:'Aggiungi pianta',today:'Oggi · Hanno bisogno d\'acqua',noWater:'Tutte le piante sono curate 🌿',searchPlants:'Cerca piante…',all:'Tutte',needsWater:'Hanno bisogno d\'acqua',emptyTitle:'Nessuna pianta',emptySub:'Aggiungi la tua prima pianta.',addPlant:'Aggiungi pianta',stepSearch:'Cerca',stepSelect:'Seleziona',stepConfigure:'Configura',searchHint:'Digita almeno 2 caratteri…',back:'← Indietro',customName:'Il mio nome per questa pianta',location:'Posizione (opzionale)',potSize:'Dimensione vaso',small:'Piccolo',medium:'Medio',large:'Grande',addPlantConfirm:'Aggiungi pianta',editPlant:'Modifica pianta',delete:'Elimina',save:'Salva',watered:'Annaffiata ✓',waterBtn:'💧 Annaffia',healthy:'In salute',waterSoon:'Annaffia presto',needsWaterStatus:'Ha bisogno d\'acqua',water:'Acqua',locationLabel:'Posizione',noResults:'Nessuna pianta trovata.',loading:'Ricerca…',toastWatered:'💧 Annaffiata!',toastAdded:'🌱 Pianta aggiunta!',toastDeleted:'🗑 Pianta eliminata.',toastSaved:'✓ Salvato.',searchPlantAPI:'Cerca pianta…',noWaterInfo:'Nessun dato di cura trovato. Puoi comunque aggiungerla con le tue impostazioni.',createCustom:'+ Aggiungi pianta personalizzata',wateringNeed:'Fabbisogno idrico',waterLow:'Basso',waterMedium:'Medio',waterHigh:'Alto',recommended:'(consigliato)',chooseWatering:'Scegli un fabbisogno idrico.',lightNeed:'Fabbisogno di luce',lightFull:'Pieno sole',lightPart:'Mezz\'ombra',lightLow:'Ombra',edit:'Modifica',lastWatered:'Ultima annaffiatura',nextWatering:'Prossima annaffiatura',family:'Famiglia',winterRest:'Riposo invernale',yes:'Sì',no:'No',envLabel:'Ambiente',envIndoor:'Interno',envOutdoor:'Esterno',envBoth:'Interno ed esterno',addedAt:'Aggiunta il',srcCatalog:'Catalogo',srcUser:'Impostazione propria',waterEstimate:'Stima basata su fabbisogno idrico, luce, dimensione del vaso e stagione – non è una misura.',undo:'Annulla',toastUndone:'↩ Annullato.',history:'Cronologia',noHistory:'Nessuna annaffiatura registrata.',avgInterval:'Intervallo medio',everyXDays:'ogni {d} giorni',waterEvent:'Annaffiata',seasonFactor:'Stagione',searchError:'Errore nel caricamento dei dati. Riprova più tardi.' },
+  nl: { add:'Plant toevoegen',today:'Vandaag · Water nodig',noWater:'Alle planten zijn verzorgd 🌿',searchPlants:'Zoek planten…',all:'Alle',needsWater:'Water nodig',emptyTitle:'Nog geen planten',emptySub:'Voeg je eerste plant toe om te beginnen.',addPlant:'Plant toevoegen',stepSearch:'Zoeken',stepSelect:'Selecteren',stepConfigure:'Configureren',searchHint:'Typ minimaal 2 tekens…',back:'← Terug',customName:'Mijn naam voor deze plant',location:'Locatie (optioneel)',potSize:'Potmaat',small:'Klein',medium:'Medium',large:'Groot',addPlantConfirm:'Plant toevoegen',editPlant:'Plant bewerken',delete:'Verwijderen',save:'Opslaan',watered:'Gegoten ✓',waterBtn:'💧 Gieten',healthy:'Gezond',waterSoon:'Binnenkort gieten',needsWaterStatus:'Heeft water nodig',water:'Water',locationLabel:'Locatie',noResults:'Geen planten gevonden.',loading:'Zoeken…',toastWatered:'💧 Gegoten!',toastAdded:'🌱 Plant toegevoegd!',toastDeleted:'🗑 Plant verwijderd.',toastSaved:'✓ Opgeslagen.',searchPlantAPI:'Plant zoeken…',noWaterInfo:'Geen verzorgingsgegevens gevonden. Je kunt de plant toch toevoegen met eigen instellingen.',createCustom:'+ Eigen plant toevoegen',wateringNeed:'Waterbehoefte',waterLow:'Laag',waterMedium:'Gemiddeld',waterHigh:'Hoog',recommended:'(aanbevolen)',chooseWatering:'Kies een waterbehoefte.',lightNeed:'Lichtbehoefte',lightFull:'Volle zon',lightPart:'Halfschaduw',lightLow:'Schaduw',edit:'Bewerken',lastWatered:'Laatst gegoten',nextWatering:'Volgende gietbeurt',family:'Familie',winterRest:'Winterrust',yes:'Ja',no:'Nee',envLabel:'Omgeving',envIndoor:'Binnen',envOutdoor:'Buiten',envBoth:'Binnen & buiten',addedAt:'Toegevoegd op',srcCatalog:'Catalogus',srcUser:'Eigen instelling',waterEstimate:'Schatting op basis van waterbehoefte, licht, potmaat en seizoen – geen meting.',undo:'Ongedaan maken',toastUndone:'↩ Ongedaan gemaakt.',history:'Geschiedenis',noHistory:'Nog geen gietbeurt vastgelegd.',avgInterval:'Gem. interval',everyXDays:'elke {d} dagen',waterEvent:'Gegoten',seasonFactor:'Seizoen',searchError:'Fout bij het laden van gegevens. Probeer het later opnieuw.' },
+  pl: { add:'Dodaj roślinę',today:'Dziś · Wymagają podlewania',noWater:'Wszystkie rośliny są zadbane 🌿',searchPlants:'Szukaj roślin…',all:'Wszystkie',needsWater:'Wymagają wody',emptyTitle:'Brak roślin',emptySub:'Dodaj pierwszą roślinę, aby rozpocząć.',addPlant:'Dodaj roślinę',stepSearch:'Szukaj',stepSelect:'Wybierz',stepConfigure:'Skonfiguruj',searchHint:'Wpisz co najmniej 2 znaki…',back:'← Wróć',customName:'Moja nazwa rośliny',location:'Lokalizacja (opcjonalnie)',potSize:'Rozmiar doniczki',small:'Mała',medium:'Średnia',large:'Duża',addPlantConfirm:'Dodaj roślinę',editPlant:'Edytuj roślinę',delete:'Usuń',save:'Zapisz',watered:'Podlana ✓',waterBtn:'💧 Podlej',healthy:'Zdrowa',waterSoon:'Wkrótce podlej',needsWaterStatus:'Potrzebuje wody',water:'Woda',locationLabel:'Lokalizacja',noResults:'Nie znaleziono roślin.',loading:'Szukam…',toastWatered:'💧 Podlana!',toastAdded:'🌱 Roślina dodana!',toastDeleted:'🗑 Roślina usunięta.',toastSaved:'✓ Zapisano.',searchPlantAPI:'Szukaj rośliny…',noWaterInfo:'Nie znaleziono danych pielęgnacyjnych. Nadal możesz dodać roślinę z własnymi ustawieniami.',createCustom:'+ Dodaj własną roślinę',wateringNeed:'Zapotrzebowanie na wodę',waterLow:'Niskie',waterMedium:'Średnie',waterHigh:'Wysokie',recommended:'(zalecane)',chooseWatering:'Wybierz zapotrzebowanie na wodę.',lightNeed:'Zapotrzebowanie na światło',lightFull:'Pełne słońce',lightPart:'Półcień',lightLow:'Cień',edit:'Edytuj',lastWatered:'Ostatnie podlewanie',nextWatering:'Następne podlewanie',family:'Rodzina',winterRest:'Spoczynek zimowy',yes:'Tak',no:'Nie',envLabel:'Środowisko',envIndoor:'Wewnątrz',envOutdoor:'Na zewnątrz',envBoth:'Wewnątrz i na zewnątrz',addedAt:'Dodano',srcCatalog:'Katalog',srcUser:'Własne ustawienie',waterEstimate:'Szacunek na podstawie zapotrzebowania na wodę, światła, rozmiaru doniczki i pory roku – nie pomiar.',undo:'Cofnij',toastUndone:'↩ Cofnięto.',history:'Historia',noHistory:'Brak zapisanych podlewań.',avgInterval:'Śr. odstęp',everyXDays:'co {d} dni',waterEvent:'Podlano',seasonFactor:'Pora roku',searchError:'Błąd ładowania danych. Spróbuj ponownie później.' },
+  ja: { add:'植物を追加',today:'今日・水やりが必要',noWater:'すべての植物は管理済みです 🌿',searchPlants:'植物を検索…',all:'すべて',needsWater:'水やりが必要',emptyTitle:'植物がありません',emptySub:'最初の植物を追加してください。',addPlant:'植物を追加',stepSearch:'検索',stepSelect:'選択',stepConfigure:'設定',searchHint:'2文字以上入力…',back:'← 戻る',customName:'植物の名前',location:'場所（任意）',potSize:'鉢のサイズ',small:'小',medium:'中',large:'大',addPlantConfirm:'植物を追加',editPlant:'植物を編集',delete:'削除',save:'保存',watered:'水やり済み ✓',waterBtn:'💧 水やり',healthy:'健康',waterSoon:'もうすぐ水やり',needsWaterStatus:'水が必要',water:'水',locationLabel:'場所',noResults:'植物が見つかりません。',loading:'検索中…',toastWatered:'💧 水やりしました！',toastAdded:'🌱 植物を追加しました！',toastDeleted:'🗑 植物を削除しました。',toastSaved:'✓ 保存しました。',searchPlantAPI:'植物を検索…',noWaterInfo:'お手入れデータが見つかりません。独自の設定で追加できます。',createCustom:'+ カスタム植物を追加',wateringNeed:'水やりの必要量',waterLow:'少',waterMedium:'中',waterHigh:'多',recommended:'（おすすめ）',chooseWatering:'水やりの必要量を選択してください。',lightNeed:'日照の必要量',lightFull:'日なた',lightPart:'半日陰',lightLow:'日陰',edit:'編集',lastWatered:'最後の水やり',nextWatering:'次の水やり',family:'科',winterRest:'冬の休眠',yes:'はい',no:'いいえ',envLabel:'環境',envIndoor:'屋内',envOutdoor:'屋外',envBoth:'屋内・屋外',addedAt:'追加日',srcCatalog:'カタログ',srcUser:'独自設定',waterEstimate:'水やり・日照・鉢のサイズ・季節からの推定値（測定値ではありません）。',undo:'元に戻す',toastUndone:'↩ 取り消しました。',history:'履歴',noHistory:'水やりの記録はまだありません。',avgInterval:'平均間隔',everyXDays:'{d}日ごと',waterEvent:'水やり',seasonFactor:'季節',searchError:'データの読み込みに失敗しました。後でもう一度お試しください。' },
+  zh: { add:'添加植物',today:'今天・需要浇水',noWater:'所有植物都已照料好 🌿',searchPlants:'搜索植物…',all:'全部',needsWater:'需要浇水',emptyTitle:'还没有植物',emptySub:'添加您的第一株植物以开始。',addPlant:'添加植物',stepSearch:'搜索',stepSelect:'选择',stepConfigure:'配置',searchHint:'请输入至少2个字符…',back:'← 返回',customName:'我给这株植物起的名字',location:'位置（可选）',potSize:'花盆大小',small:'小',medium:'中',large:'大',addPlantConfirm:'添加植物',editPlant:'编辑植物',delete:'删除',save:'保存',watered:'已浇水 ✓',waterBtn:'💧 浇水',healthy:'健康',waterSoon:'即将浇水',needsWaterStatus:'需要浇水',water:'水',locationLabel:'位置',noResults:'未找到植物。',loading:'搜索中…',toastWatered:'💧 已浇水！',toastAdded:'🌱 植物已添加！',toastDeleted:'🗑 植物已删除。',toastSaved:'✓ 已保存。',searchPlantAPI:'搜索植物…',noWaterInfo:'未找到养护数据。您仍可以使用自己的设置添加。',createCustom:'+ 添加自定义植物',wateringNeed:'需水量',waterLow:'少',waterMedium:'中',waterHigh:'多',recommended:'（推荐）',chooseWatering:'请选择需水量。',lightNeed:'光照需求',lightFull:'全日照',lightPart:'半阴',lightLow:'阴凉',edit:'编辑',lastWatered:'上次浇水',nextWatering:'下次浇水',family:'科',winterRest:'冬季休眠',yes:'是',no:'否',envLabel:'环境',envIndoor:'室内',envOutdoor:'室外',envBoth:'室内和室外',addedAt:'添加于',srcCatalog:'目录',srcUser:'自定义设置',waterEstimate:'根据需水量、光照、花盆大小和季节估算，并非实测值。',undo:'撤销',toastUndone:'↩ 已撤销。',history:'历史记录',noHistory:'尚无浇水记录。',avgInterval:'平均间隔',everyXDays:'每 {d} 天',waterEvent:'已浇水',seasonFactor:'季节',searchError:'加载数据失败，请稍后重试。' },
 };
 
 /* ── App state ────────────────────────────────────────── */
 let state = {
   plants: [],
+  careEvents: [], // source of truth for care history; plant.lastWateredAt is a derived cache
   lang: 'de',
   filter: 'all',
   searchQuery: '',
@@ -129,26 +130,86 @@ let state = {
 };
 
 /* ── LocalStorage ─────────────────────────────────────── */
-const STORAGE_KEY = 'omega_garden_v1';
+const STORAGE_KEY    = 'omega_garden_v1';
+const BACKUP_KEY     = 'omega_garden_v1_backup';
+const SCHEMA_VERSION = 2;
 
 function loadFromStorage() {
+  let raw = null;
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const saved = JSON.parse(raw);
-      state.plants = saved.plants || [];
-      state.lang   = saved.lang   || 'de';
-    }
-  } catch(e) { console.warn('Storage read error', e); }
+    raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    state.plants     = Array.isArray(saved.plants)     ? saved.plants     : [];
+    state.careEvents = Array.isArray(saved.careEvents) ? saved.careEvents : [];
+    state.lang       = saved.lang || 'de';
+    if (!(saved.schemaVersion >= SCHEMA_VERSION)) migrateToV2(raw);
+  } catch(e) {
+    console.warn('Storage read error', e);
+    // Keep the unreadable data instead of overwriting it on the next save
+    if (raw) { try { localStorage.setItem(BACKUP_KEY, raw); } catch(_) {} }
+  }
+}
+
+// v1 kept only the latest watering per plant; turn it into the first care event
+function migrateToV2(raw) {
+  try { localStorage.setItem(BACKUP_KEY, raw); } catch(e) { console.warn('Backup failed', e); }
+  if (!state.careEvents.length) {
+    state.careEvents = state.plants
+      .map(p => ({ id: uid(), plantId: p.id, type: 'water', at: p.lastWateredAt || p.addedAt }))
+      .filter(ev => ev.at);
+  }
+  saveToStorage();
 }
 
 function saveToStorage() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      plants: state.plants,
-      lang:   state.lang,
+      schemaVersion: SCHEMA_VERSION,
+      plants:        state.plants,
+      careEvents:    state.careEvents,
+      lang:          state.lang,
     }));
   } catch(e) { console.warn('Storage write error', e); }
+}
+
+/* ── Care events ──────────────────────────────────────── */
+function plantEvents(plantId, type = 'water') {
+  return state.careEvents
+    .filter(ev => ev.plantId === plantId && ev.type === type)
+    .sort((a, b) => a.at.localeCompare(b.at));
+}
+
+// Events are the source of truth; lastWateredAt mirrors the newest one so that
+// rendering does not have to scan the whole event list on every frame.
+function syncWateredCache(plant) {
+  const events = plantEvents(plant.id);
+  plant.lastWateredAt = events.length ? events[events.length - 1].at : plant.addedAt;
+}
+
+function addCareEvent(plant, type = 'water', at = new Date().toISOString()) {
+  state.careEvents.push({ id: uid(), plantId: plant.id, type, at });
+  syncWateredCache(plant);
+  plant.updatedAt = new Date().toISOString();
+}
+
+function undoLastCareEvent(plantId) {
+  const events = plantEvents(plantId);
+  if (!events.length) return false;
+  const newest = events[events.length - 1];
+  state.careEvents = state.careEvents.filter(ev => ev.id !== newest.id);
+  const plant = state.plants.find(p => p.id === plantId);
+  if (plant) syncWateredCache(plant);
+  return true;
+}
+
+// Average days between waterings; null until there are at least two events
+function averageInterval(plantId) {
+  const events = plantEvents(plantId);
+  if (events.length < 2) return null;
+  const first = new Date(events[0].at).getTime();
+  const last  = new Date(events[events.length - 1].at).getTime();
+  return (last - first) / DAY_MS / (events.length - 1);
 }
 
 /* ── i18n ────────────────────────────────────────────── */
@@ -168,15 +229,36 @@ function applyI18n() {
 }
 
 /* ── Water engine ─────────────────────────────────────── */
+const DAY_MS     = 24 * 60 * 60 * 1000;
 const BASE_DECAY = { low: 5, medium: 10, high: 18 };
 const LIGHT_ADJ  = { 'full sun': 2, 'part shade': 0, 'low light': -1 };
 const SIZE_MULT  = { small: 1.3, medium: 1.0, large: 0.75 };
 
-function getDailyDecay(plant) {
-  const base  = BASE_DECAY[plant.wateringNeed] || 10;
-  const light = LIGHT_ADJ[plant.lightNeed]     ?? 0;
-  const size  = SIZE_MULT[plant.potSize]        || 1.0;
-  return Math.min(25, Math.max(1, (base + light) * size));
+// Seasonal factor per month (Jan..Dec), northern hemisphere: less light and
+// slower growth in winter means less water. Plants with a dormant period
+// (catalog flag winterRest) are reduced more strongly than evergreen ones.
+const SEASON_FACTOR = {
+  rest:   [0.60, 0.60, 0.75, 0.90, 1.00, 1.10, 1.10, 1.10, 1.00, 0.85, 0.70, 0.60],
+  active: [0.85, 0.85, 0.90, 0.95, 1.00, 1.05, 1.05, 1.05, 1.00, 0.95, 0.90, 0.85],
+};
+
+// Winter rest is a catalog fact, looked up instead of copied onto the plant.
+// Until the catalog is loaded every plant is treated as evergreen.
+function hasWinterRest(plant) {
+  if (!plant.catalogId || !catalogById) return false;
+  return catalogById.get(plant.catalogId)?.winterRest === true;
+}
+
+function getSeasonFactor(plant, at = Date.now()) {
+  return SEASON_FACTOR[hasWinterRest(plant) ? 'rest' : 'active'][new Date(at).getMonth()];
+}
+
+function getDailyDecay(plant, at = Date.now()) {
+  const base   = BASE_DECAY[plant.wateringNeed] || 10;
+  const light  = LIGHT_ADJ[plant.lightNeed]     ?? 0;
+  const size   = SIZE_MULT[plant.potSize]        || 1.0;
+  const season = getSeasonFactor(plant, at);
+  return Math.min(25, Math.max(1, (base + light) * size * season));
 }
 
 function getCurrentWaterLevel(plant) {
@@ -371,12 +453,19 @@ function careChipsHtml(p) {
 function waterPlant(id) {
   const plant = state.plants.find(p => p.id === id);
   if (!plant) return;
-  plant.waterLevel   = 100;
-  plant.lastWateredAt = new Date().toISOString();
-  plant.updatedAt    = new Date().toISOString();
+  plant.waterLevel = 100;
+  addCareEvent(plant, 'water');
   saveToStorage();
   renderAll();
-  showToast(t('toastWatered'));
+  showToast(t('toastWatered'), { label: t('undo'), run: () => undoWatering(id) });
+}
+
+function undoWatering(id) {
+  if (!undoLastCareEvent(id)) return;
+  saveToStorage();
+  renderAll();
+  if (state.detailPlantId === id) openDetailModal(id);
+  showToast(t('toastUndone'));
 }
 
 /* ── Plant catalog (data/plants.json) ─────────────────── */
@@ -390,6 +479,8 @@ const LIGHT_LABEL_KEYS = { 'full sun': 'lightFull', 'part shade': 'lightPart', '
 const LIGHT_ICONS  = { 'full sun': '☀️', 'part shade': '⛅', 'low light': '☁️' };
 const ENV_LABEL_KEYS = { indoor: 'envIndoor', outdoor: 'envOutdoor', both: 'envBoth' };
 let catalogPromise = null;
+
+let catalogById = null; // id → entry, set once the catalog is loaded (sync lookups)
 
 function findCatalogEntry(catalogId) {
   if (!catalogId) return Promise.resolve(null);
@@ -425,6 +516,10 @@ function loadCatalog() {
           ...(entry.names.en || []),
         ].map(normalizeTerm),
       })))
+      .then(index => {
+        catalogById = new Map(index.map(item => [item.entry.id, item.entry]));
+        return index;
+      })
       .catch(err => {
         catalogPromise = null;
         throw err;
@@ -667,6 +762,7 @@ function confirmAddPlant() {
   };
 
   state.plants.unshift(plant);
+  addCareEvent(plant, 'water', plant.addedAt);
   saveToStorage();
   closeAddModal();
   renderAll();
@@ -674,8 +770,8 @@ function confirmAddPlant() {
 }
 
 /* ── Detail modal ─────────────────────────────────────── */
-const DAY_MS = 24 * 60 * 60 * 1000;
 const NEEDS_WATER_LEVEL = 30; // below this the status is "needs water"
+const MAX_HISTORY       = 10; // newest entries shown in the detail view
 
 function relativeDays(days) {
   return new Intl.RelativeTimeFormat(state.lang, { numeric: 'auto' }).format(days, 'day');
@@ -715,6 +811,22 @@ function renderDetail(plant, entry) {
     detailRow(t('winterRest'), esc(t(entry.winterRest ? 'yes' : 'no'))),
   ].join('') : '';
 
+  const season    = getSeasonFactor(plant);
+  const seasonRow = season === 1 ? '' : detailRow(
+    t('seasonFactor'),
+    `${season > 1 ? '+' : ''}${Math.round((season - 1) * 100)} %`
+  );
+
+  const avg    = averageInterval(plant.id);
+  const avgRow = avg === null ? '' : detailRow(t('avgInterval'), esc(t('everyXDays').replace('{d}', Math.round(avg))));
+
+  const events   = plantEvents(plant.id).slice(-MAX_HISTORY).reverse();
+  const historyHtml = events.length
+    ? `<ul class="detail-history">${events.map(ev =>
+        `<li><span class="history-icon">💧</span><span>${esc(t('waterEvent'))}</span><time>${esc(formatDate(ev.at))}</time></li>`
+      ).join('')}</ul>`
+    : `<p class="form-hint">${esc(t('noHistory'))}</p>`;
+
   document.getElementById('detail-modal-title').textContent = plant.customName;
   document.getElementById('detail-body').innerHTML = `
     ${imgHtml}
@@ -735,11 +847,15 @@ function renderDetail(plant, entry) {
       ${detailRow(t('nextWatering'), esc(relativeDays(untilDays)))}
       ${detailRow(t('wateringNeed'), waterValue, plant.wateringSource)}
       ${detailRow(t('lightNeed'), lightValue, plant.lightSource)}
+      ${seasonRow}
+      ${avgRow}
       ${detailRow(t('potSize'), esc(t(plant.potSize || 'medium')))}
       ${detailRow(t('locationLabel'), esc(plant.location) || '—')}
       ${catalogRows}
       ${detailRow(t('addedAt'), esc(formatDate(plant.addedAt)))}
-    </dl>`;
+    </dl>
+    <h3 class="detail-section-title">${esc(t('history'))}</h3>
+    ${historyHtml}`;
 }
 
 function openDetailModal(id) {
@@ -818,7 +934,8 @@ function saveEdit() {
 function deletePlant() {
   const id = state.editingPlantId;
   if (!id) return;
-  state.plants = state.plants.filter(p => p.id !== id);
+  state.plants     = state.plants.filter(p => p.id !== id);
+  state.careEvents = state.careEvents.filter(ev => ev.plantId !== id);
   saveToStorage();
   closeEditModal();
   renderAll();
@@ -827,12 +944,22 @@ function deletePlant() {
 
 /* ── Toast ────────────────────────────────────────────── */
 let toastTimer = null;
-function showToast(msg) {
+function showToast(msg, action) {
   const el = document.getElementById('toast');
   el.textContent = msg;
+  if (action) {
+    const btn = document.createElement('button');
+    btn.className = 'toast-action';
+    btn.textContent = action.label;
+    btn.addEventListener('click', () => {
+      el.classList.remove('show');
+      action.run();
+    });
+    el.appendChild(btn);
+  }
   el.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+  toastTimer = setTimeout(() => el.classList.remove('show'), action ? 6000 : 2400);
 }
 
 /* ── Escape helper ────────────────────────────────────── */
@@ -931,6 +1058,9 @@ function init() {
   loadFromStorage();
   bindEvents();
   renderAll();
+
+  // The seasonal factor needs the catalog's winterRest flag; re-render once it is there
+  if (state.plants.length) loadCatalog().then(renderAll).catch(() => {});
 
   // Refresh water levels every minute
   setInterval(renderAll, 60 * 1000);
