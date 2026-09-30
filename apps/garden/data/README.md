@@ -47,10 +47,14 @@ Eine Zeile pro Eintrag, damit Git-Diffs lesbar bleiben.
   Gemessen < 1 ms pro Anfrage. Ein Trie/Suchindex lohnt sich erst bei > 10.000 Einträgen.
 - **Sorten-Rückfall:** Kein Treffer bei `Philodendron Birkin` → erneut mit dem
   ersten Wort suchen → Gattung `Philodendron`.
-- **Kein Treffer:** optional Perenual (nur Name/Bild) oder manuelle Auswahl
-  des Gießbedarfs.
-- **Referenz:** gespeicherte Pflanzen sollten später `catalogId` (= `id`)
-  speichern, damit Katalogkorrekturen und Sensor-Schwellwerte zugeordnet werden können.
+- **Kein Treffer:** Hinweis „keine Pflegedaten" + Button „Eigene Pflanze anlegen";
+  der Gießbedarf wird dann manuell gewählt (Pflicht). Eine externe API wird
+  derzeit nicht verwendet; geplant ist später eine optionale KI-Suche.
+- **Empfehlung:** Bei Katalogtreffern ist der Katalogwert vorausgewählt und mit
+  „(empfohlen)" markiert, bleibt aber änderbar (auch im Bearbeiten-Dialog).
+- **Referenz:** gespeicherte Pflanzen speichern `catalogId` (= `id`) und
+  `wateringSource` (`catalog` = Empfehlung übernommen, `user` = eigene Wahl),
+  damit Katalogkorrekturen und Sensor-Schwellwerte zugeordnet werden können.
 
 ## Zukunft (Sensoren / Datenbank)
 
