@@ -350,10 +350,11 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  cursor: default;
+  cursor: pointer;
   transition: border-color 0.25s var(--ease), background 0.25s var(--ease), transform 0.2s var(--ease);
   animation: card-in 0.4s var(--ease) both;
 }
+.plant-card:focus-visible { outline: 2px solid var(--green-mid); outline-offset: 2px; }
 .plant-card:hover {
   border-color: var(--border-1);
   background: var(--bg-card-hover);
@@ -617,6 +618,8 @@ body {
 .empty-icon { font-size: 48px; line-height: 1; margin-bottom: 8px; }
 .empty-title { font-family: var(--font-display); font-size: 20px; font-weight: 300; color: var(--text-1); }
 .empty-sub { font-size: 13px; color: var(--text-2); max-width: 280px; }
+.empty-state[hidden] { display: none !important; }
+.grid-no-results { grid-column: 1 / -1; }
 
 /* ── Modal ───────────────────────────────────────────── */
 .modal-backdrop {
@@ -917,9 +920,13 @@ body {
 }
 
 #water-need-group,
-#edit-water-need-group { flex-wrap: wrap; }
+#edit-water-need-group,
+#light-need-group,
+#edit-light-need-group { flex-wrap: wrap; }
 #water-need-group .radio-option,
-#edit-water-need-group .radio-option { min-width: 90px; text-align: center; }
+#edit-water-need-group .radio-option,
+#light-need-group .radio-option,
+#edit-light-need-group .radio-option { min-width: 90px; text-align: center; }
 
 .recommended-tag {
   display: block;
@@ -941,6 +948,52 @@ body {
   justify-content: center;
   padding: 12px 0 4px;
 }
+
+/* ── Care chips (card) ───────────────────────────────── */
+.card-care {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.care-chip {
+  font-size: 11px;
+  color: var(--text-2);
+  background: var(--bg-3);
+  border: 1px solid var(--border-0);
+  border-radius: var(--r-sm);
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* ── Detail modal ────────────────────────────────────── */
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.detail-image { border-radius: var(--r-md); border: 1px solid var(--border-0); }
+.card-image-placeholder.detail-image { aspect-ratio: 4/1; font-size: 32px; }
+.detail-species { font-size: 14px; color: var(--text-1); }
+.detail-sci { font-size: 13px; color: var(--text-2); font-style: italic; }
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-0);
+  margin-top: 4px;
+}
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-0);
+  font-size: 13px;
+}
+.detail-row dt { color: var(--text-2); }
+.detail-row dd { margin: 0; color: var(--text-0); text-align: right; }
+.recommended-tag--inline { display: inline; margin-left: 4px; }
 
 .modal-footer {
   display: flex;

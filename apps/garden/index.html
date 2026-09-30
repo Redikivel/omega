@@ -155,6 +155,10 @@
           <p class="form-hint hidden" id="water-need-hint" data-i18n="chooseWatering">Bitte Gießbedarf auswählen.</p>
         </div>
         <div class="form-group">
+          <label class="form-label" data-i18n="lightNeed">Lichtbedarf</label>
+          <div class="radio-group" id="light-need-group"><!-- Filled by JS --></div>
+        </div>
+        <div class="form-group">
           <label class="form-label" data-i18n="potSize">Topfgröße</label>
           <div class="radio-group" id="pot-size-group">
             <label class="radio-option">
@@ -204,6 +208,10 @@
           <div class="radio-group" id="edit-water-need-group"><!-- Filled by JS --></div>
         </div>
         <div class="form-group">
+          <label class="form-label" data-i18n="lightNeed">Lichtbedarf</label>
+          <div class="radio-group" id="edit-light-need-group"><!-- Filled by JS --></div>
+        </div>
+        <div class="form-group">
           <label class="form-label" data-i18n="potSize">Topfgröße</label>
           <div class="radio-group" id="edit-pot-size-group">
             <label class="radio-option"><input type="radio" name="edit-pot-size" value="small" /><span data-i18n="small">Klein</span></label>
@@ -214,6 +222,27 @@
         <div class="modal-footer">
           <button class="btn-danger-ghost" id="btn-delete-plant" data-i18n="delete">Löschen</button>
           <button class="btn-add" id="btn-save-edit" data-i18n="save">Speichern</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ DETAIL MODAL ═════════ -->
+  <div class="modal-backdrop" id="detail-modal-backdrop" hidden aria-modal="true" role="dialog" aria-labelledby="detail-modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="detail-modal-title"></h2>
+        <button class="modal-close" id="btn-close-detail" aria-label="Schließen">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-step">
+        <div class="detail-body" id="detail-body"><!-- Filled by JS --></div>
+        <div class="modal-footer">
+          <button class="btn-ghost" id="btn-detail-edit" data-i18n="edit">Bearbeiten</button>
+          <button class="btn-add" id="btn-detail-water" data-i18n="waterBtn">💧 Gießen</button>
         </div>
       </div>
     </div>
