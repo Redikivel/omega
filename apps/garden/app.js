@@ -1,8 +1,7 @@
 /* ═══════════════════════════════════════════════════════
    OMEGA GARDEN — app.js
    Vanilla JS · no framework · Vercel static
-   API calls → /api/search?q=… and /api/plant?id=…
-   (served by generate.py as Vercel Python functions)
+   Plant catalog → data/plants.json (searched client-side)
    ═══════════════════════════════════════════════════════ */
 
 'use strict';
@@ -27,7 +26,7 @@ const TRANSLATIONS = {
     toastWatered: '💧 Gegossen!', toastAdded: '🌱 Pflanze hinzugefügt!',
     toastDeleted: '🗑 Pflanze gelöscht.', toastSaved: '✓ Gespeichert.',
     searchPlantAPI: 'Pflanze suchen, z.B. Monstera…',
-    noWaterInfo: 'Keine Bewässerungsdaten — Pflanze kann nicht hinzugefügt werden.',
+    noWaterInfo: 'Keine Pflegedaten zu dieser Pflanze gefunden. Du kannst sie trotzdem mit eigenen Angaben anlegen.', createCustom: '+ Eigene Pflanze anlegen', wateringNeed: 'Gießbedarf', waterLow: 'Wenig', waterMedium: 'Mittel', waterHigh: 'Viel', recommended: '(empfohlen)', chooseWatering: 'Bitte Gießbedarf auswählen.',
     searchError: 'Fehler beim Laden der Daten. Bitte später erneut versuchen.',
   },
   en: {
@@ -48,7 +47,7 @@ const TRANSLATIONS = {
     toastWatered: '💧 Watered!', toastAdded: '🌱 Plant added!',
     toastDeleted: '🗑 Plant deleted.', toastSaved: '✓ Saved.',
     searchPlantAPI: 'Search plant, e.g. Monstera…',
-    noWaterInfo: 'No watering data — plant cannot be added.',
+    noWaterInfo: 'No care data found for this plant. You can still add it with your own settings.', createCustom: '+ Add custom plant', wateringNeed: 'Watering need', waterLow: 'Low', waterMedium: 'Medium', waterHigh: 'High', recommended: '(recommended)', chooseWatering: 'Please choose a watering need.',
     searchError: 'Error loading data. Please try again later.',
   },
   fr: {
@@ -67,7 +66,7 @@ const TRANSLATIONS = {
     noResults: 'Aucune plante trouvée.', loading: 'Recherche…',
     toastWatered: '💧 Arrosée !', toastAdded: '🌱 Plante ajoutée !',
     toastDeleted: '🗑 Plante supprimée.', toastSaved: '✓ Sauvegardé.',
-    searchPlantAPI: 'Chercher une plante…', noWaterInfo: 'Données d\'arrosage manquantes.',
+    searchPlantAPI: 'Chercher une plante…', noWaterInfo: 'Aucune donnée d\'entretien trouvée. Vous pouvez quand même l\'ajouter avec vos propres réglages.', createCustom: '+ Ajouter une plante personnalisée', wateringNeed: 'Besoin en eau', waterLow: 'Faible', waterMedium: 'Moyen', waterHigh: 'Élevé', recommended: '(recommandé)', chooseWatering: 'Veuillez choisir un besoin en eau.',
     searchError: 'Erreur de chargement des données. Réessayez plus tard.',
   },
   es: {
@@ -86,7 +85,7 @@ const TRANSLATIONS = {
     noResults: 'No se encontraron plantas.', loading: 'Buscando…',
     toastWatered: '💧 ¡Regada!', toastAdded: '🌱 ¡Planta añadida!',
     toastDeleted: '🗑 Planta eliminada.', toastSaved: '✓ Guardado.',
-    searchPlantAPI: 'Buscar planta…', noWaterInfo: 'Sin datos de riego.',
+    searchPlantAPI: 'Buscar planta…', noWaterInfo: 'No se encontraron datos de cuidado. Puedes añadirla igualmente con tus propios ajustes.', createCustom: '+ Añadir planta personalizada', wateringNeed: 'Necesidad de riego', waterLow: 'Baja', waterMedium: 'Media', waterHigh: 'Alta', recommended: '(recomendado)', chooseWatering: 'Elige una necesidad de riego.',
     searchError: 'Error al cargar los datos. Inténtalo más tarde.',
   },
   pt: {
@@ -105,14 +104,14 @@ const TRANSLATIONS = {
     noResults: 'Nenhuma planta encontrada.', loading: 'Pesquisando…',
     toastWatered: '💧 Regada!', toastAdded: '🌱 Planta adicionada!',
     toastDeleted: '🗑 Planta excluída.', toastSaved: '✓ Salvo.',
-    searchPlantAPI: 'Pesquisar planta…', noWaterInfo: 'Sem dados de rega.',
+    searchPlantAPI: 'Pesquisar planta…', noWaterInfo: 'Nenhum dado de cuidado encontrado. Você ainda pode adicioná-la com suas próprias configurações.', createCustom: '+ Adicionar planta personalizada', wateringNeed: 'Necessidade de rega', waterLow: 'Baixa', waterMedium: 'Média', waterHigh: 'Alta', recommended: '(recomendado)', chooseWatering: 'Escolha uma necessidade de rega.',
     searchError: 'Erro ao carregar dados. Tente novamente mais tarde.',
   },
-  it: { add:'Aggiungi pianta',today:'Oggi · Hanno bisogno d\'acqua',noWater:'Tutte le piante sono curate 🌿',searchPlants:'Cerca piante…',all:'Tutte',needsWater:'Hanno bisogno d\'acqua',emptyTitle:'Nessuna pianta',emptySub:'Aggiungi la tua prima pianta.',addPlant:'Aggiungi pianta',stepSearch:'Cerca',stepSelect:'Seleziona',stepConfigure:'Configura',searchHint:'Digita almeno 2 caratteri…',back:'← Indietro',customName:'Il mio nome per questa pianta',location:'Posizione (opzionale)',potSize:'Dimensione vaso',small:'Piccolo',medium:'Medio',large:'Grande',addPlantConfirm:'Aggiungi pianta',editPlant:'Modifica pianta',delete:'Elimina',save:'Salva',watered:'Annaffiata ✓',waterBtn:'💧 Annaffia',healthy:'In salute',waterSoon:'Annaffia presto',needsWaterStatus:'Ha bisogno d\'acqua',water:'Acqua',locationLabel:'Posizione',noResults:'Nessuna pianta trovata.',loading:'Ricerca…',toastWatered:'💧 Annaffiata!',toastAdded:'🌱 Pianta aggiunta!',toastDeleted:'🗑 Pianta eliminata.',toastSaved:'✓ Salvato.',searchPlantAPI:'Cerca pianta…',noWaterInfo:'Nessun dato di irrigazione.',searchError:'Errore nel caricamento dei dati. Riprova più tardi.' },
-  nl: { add:'Plant toevoegen',today:'Vandaag · Water nodig',noWater:'Alle planten zijn verzorgd 🌿',searchPlants:'Zoek planten…',all:'Alle',needsWater:'Water nodig',emptyTitle:'Nog geen planten',emptySub:'Voeg je eerste plant toe om te beginnen.',addPlant:'Plant toevoegen',stepSearch:'Zoeken',stepSelect:'Selecteren',stepConfigure:'Configureren',searchHint:'Typ minimaal 2 tekens…',back:'← Terug',customName:'Mijn naam voor deze plant',location:'Locatie (optioneel)',potSize:'Potmaat',small:'Klein',medium:'Medium',large:'Groot',addPlantConfirm:'Plant toevoegen',editPlant:'Plant bewerken',delete:'Verwijderen',save:'Opslaan',watered:'Gegoten ✓',waterBtn:'💧 Gieten',healthy:'Gezond',waterSoon:'Binnenkort gieten',needsWaterStatus:'Heeft water nodig',water:'Water',locationLabel:'Locatie',noResults:'Geen planten gevonden.',loading:'Zoeken…',toastWatered:'💧 Gegoten!',toastAdded:'🌱 Plant toegevoegd!',toastDeleted:'🗑 Plant verwijderd.',toastSaved:'✓ Opgeslagen.',searchPlantAPI:'Plant zoeken…',noWaterInfo:'Geen gietgegevens.',searchError:'Fout bij het laden van gegevens. Probeer het later opnieuw.' },
-  pl: { add:'Dodaj roślinę',today:'Dziś · Wymagają podlewania',noWater:'Wszystkie rośliny są zadbane 🌿',searchPlants:'Szukaj roślin…',all:'Wszystkie',needsWater:'Wymagają wody',emptyTitle:'Brak roślin',emptySub:'Dodaj pierwszą roślinę, aby rozpocząć.',addPlant:'Dodaj roślinę',stepSearch:'Szukaj',stepSelect:'Wybierz',stepConfigure:'Skonfiguruj',searchHint:'Wpisz co najmniej 2 znaki…',back:'← Wróć',customName:'Moja nazwa rośliny',location:'Lokalizacja (opcjonalnie)',potSize:'Rozmiar doniczki',small:'Mała',medium:'Średnia',large:'Duża',addPlantConfirm:'Dodaj roślinę',editPlant:'Edytuj roślinę',delete:'Usuń',save:'Zapisz',watered:'Podlana ✓',waterBtn:'💧 Podlej',healthy:'Zdrowa',waterSoon:'Wkrótce podlej',needsWaterStatus:'Potrzebuje wody',water:'Woda',locationLabel:'Lokalizacja',noResults:'Nie znaleziono roślin.',loading:'Szukam…',toastWatered:'💧 Podlana!',toastAdded:'🌱 Roślina dodana!',toastDeleted:'🗑 Roślina usunięta.',toastSaved:'✓ Zapisano.',searchPlantAPI:'Szukaj rośliny…',noWaterInfo:'Brak danych o podlewaniu.',searchError:'Błąd ładowania danych. Spróbuj ponownie później.' },
-  ja: { add:'植物を追加',today:'今日・水やりが必要',noWater:'すべての植物は管理済みです 🌿',searchPlants:'植物を検索…',all:'すべて',needsWater:'水やりが必要',emptyTitle:'植物がありません',emptySub:'最初の植物を追加してください。',addPlant:'植物を追加',stepSearch:'検索',stepSelect:'選択',stepConfigure:'設定',searchHint:'2文字以上入力…',back:'← 戻る',customName:'植物の名前',location:'場所（任意）',potSize:'鉢のサイズ',small:'小',medium:'中',large:'大',addPlantConfirm:'植物を追加',editPlant:'植物を編集',delete:'削除',save:'保存',watered:'水やり済み ✓',waterBtn:'💧 水やり',healthy:'健康',waterSoon:'もうすぐ水やり',needsWaterStatus:'水が必要',water:'水',locationLabel:'場所',noResults:'植物が見つかりません。',loading:'検索中…',toastWatered:'💧 水やりしました！',toastAdded:'🌱 植物を追加しました！',toastDeleted:'🗑 植物を削除しました。',toastSaved:'✓ 保存しました。',searchPlantAPI:'植物を検索…',noWaterInfo:'水やりデータがありません。',searchError:'データの読み込みに失敗しました。後でもう一度お試しください。' },
-  zh: { add:'添加植物',today:'今天・需要浇水',noWater:'所有植物都已照料好 🌿',searchPlants:'搜索植物…',all:'全部',needsWater:'需要浇水',emptyTitle:'还没有植物',emptySub:'添加您的第一株植物以开始。',addPlant:'添加植物',stepSearch:'搜索',stepSelect:'选择',stepConfigure:'配置',searchHint:'请输入至少2个字符…',back:'← 返回',customName:'我给这株植物起的名字',location:'位置（可选）',potSize:'花盆大小',small:'小',medium:'中',large:'大',addPlantConfirm:'添加植物',editPlant:'编辑植物',delete:'删除',save:'保存',watered:'已浇水 ✓',waterBtn:'💧 浇水',healthy:'健康',waterSoon:'即将浇水',needsWaterStatus:'需要浇水',water:'水',locationLabel:'位置',noResults:'未找到植物。',loading:'搜索中…',toastWatered:'💧 已浇水！',toastAdded:'🌱 植物已添加！',toastDeleted:'🗑 植物已删除。',toastSaved:'✓ 已保存。',searchPlantAPI:'搜索植物…',noWaterInfo:'没有浇水数据。',searchError:'加载数据失败，请稍后重试。' },
+  it: { add:'Aggiungi pianta',today:'Oggi · Hanno bisogno d\'acqua',noWater:'Tutte le piante sono curate 🌿',searchPlants:'Cerca piante…',all:'Tutte',needsWater:'Hanno bisogno d\'acqua',emptyTitle:'Nessuna pianta',emptySub:'Aggiungi la tua prima pianta.',addPlant:'Aggiungi pianta',stepSearch:'Cerca',stepSelect:'Seleziona',stepConfigure:'Configura',searchHint:'Digita almeno 2 caratteri…',back:'← Indietro',customName:'Il mio nome per questa pianta',location:'Posizione (opzionale)',potSize:'Dimensione vaso',small:'Piccolo',medium:'Medio',large:'Grande',addPlantConfirm:'Aggiungi pianta',editPlant:'Modifica pianta',delete:'Elimina',save:'Salva',watered:'Annaffiata ✓',waterBtn:'💧 Annaffia',healthy:'In salute',waterSoon:'Annaffia presto',needsWaterStatus:'Ha bisogno d\'acqua',water:'Acqua',locationLabel:'Posizione',noResults:'Nessuna pianta trovata.',loading:'Ricerca…',toastWatered:'💧 Annaffiata!',toastAdded:'🌱 Pianta aggiunta!',toastDeleted:'🗑 Pianta eliminata.',toastSaved:'✓ Salvato.',searchPlantAPI:'Cerca pianta…',noWaterInfo:'Nessun dato di cura trovato. Puoi comunque aggiungerla con le tue impostazioni.',createCustom:'+ Aggiungi pianta personalizzata',wateringNeed:'Fabbisogno idrico',waterLow:'Basso',waterMedium:'Medio',waterHigh:'Alto',recommended:'(consigliato)',chooseWatering:'Scegli un fabbisogno idrico.',searchError:'Errore nel caricamento dei dati. Riprova più tardi.' },
+  nl: { add:'Plant toevoegen',today:'Vandaag · Water nodig',noWater:'Alle planten zijn verzorgd 🌿',searchPlants:'Zoek planten…',all:'Alle',needsWater:'Water nodig',emptyTitle:'Nog geen planten',emptySub:'Voeg je eerste plant toe om te beginnen.',addPlant:'Plant toevoegen',stepSearch:'Zoeken',stepSelect:'Selecteren',stepConfigure:'Configureren',searchHint:'Typ minimaal 2 tekens…',back:'← Terug',customName:'Mijn naam voor deze plant',location:'Locatie (optioneel)',potSize:'Potmaat',small:'Klein',medium:'Medium',large:'Groot',addPlantConfirm:'Plant toevoegen',editPlant:'Plant bewerken',delete:'Verwijderen',save:'Opslaan',watered:'Gegoten ✓',waterBtn:'💧 Gieten',healthy:'Gezond',waterSoon:'Binnenkort gieten',needsWaterStatus:'Heeft water nodig',water:'Water',locationLabel:'Locatie',noResults:'Geen planten gevonden.',loading:'Zoeken…',toastWatered:'💧 Gegoten!',toastAdded:'🌱 Plant toegevoegd!',toastDeleted:'🗑 Plant verwijderd.',toastSaved:'✓ Opgeslagen.',searchPlantAPI:'Plant zoeken…',noWaterInfo:'Geen verzorgingsgegevens gevonden. Je kunt de plant toch toevoegen met eigen instellingen.',createCustom:'+ Eigen plant toevoegen',wateringNeed:'Waterbehoefte',waterLow:'Laag',waterMedium:'Gemiddeld',waterHigh:'Hoog',recommended:'(aanbevolen)',chooseWatering:'Kies een waterbehoefte.',searchError:'Fout bij het laden van gegevens. Probeer het later opnieuw.' },
+  pl: { add:'Dodaj roślinę',today:'Dziś · Wymagają podlewania',noWater:'Wszystkie rośliny są zadbane 🌿',searchPlants:'Szukaj roślin…',all:'Wszystkie',needsWater:'Wymagają wody',emptyTitle:'Brak roślin',emptySub:'Dodaj pierwszą roślinę, aby rozpocząć.',addPlant:'Dodaj roślinę',stepSearch:'Szukaj',stepSelect:'Wybierz',stepConfigure:'Skonfiguruj',searchHint:'Wpisz co najmniej 2 znaki…',back:'← Wróć',customName:'Moja nazwa rośliny',location:'Lokalizacja (opcjonalnie)',potSize:'Rozmiar doniczki',small:'Mała',medium:'Średnia',large:'Duża',addPlantConfirm:'Dodaj roślinę',editPlant:'Edytuj roślinę',delete:'Usuń',save:'Zapisz',watered:'Podlana ✓',waterBtn:'💧 Podlej',healthy:'Zdrowa',waterSoon:'Wkrótce podlej',needsWaterStatus:'Potrzebuje wody',water:'Woda',locationLabel:'Lokalizacja',noResults:'Nie znaleziono roślin.',loading:'Szukam…',toastWatered:'💧 Podlana!',toastAdded:'🌱 Roślina dodana!',toastDeleted:'🗑 Roślina usunięta.',toastSaved:'✓ Zapisano.',searchPlantAPI:'Szukaj rośliny…',noWaterInfo:'Nie znaleziono danych pielęgnacyjnych. Nadal możesz dodać roślinę z własnymi ustawieniami.',createCustom:'+ Dodaj własną roślinę',wateringNeed:'Zapotrzebowanie na wodę',waterLow:'Niskie',waterMedium:'Średnie',waterHigh:'Wysokie',recommended:'(zalecane)',chooseWatering:'Wybierz zapotrzebowanie na wodę.',searchError:'Błąd ładowania danych. Spróbuj ponownie później.' },
+  ja: { add:'植物を追加',today:'今日・水やりが必要',noWater:'すべての植物は管理済みです 🌿',searchPlants:'植物を検索…',all:'すべて',needsWater:'水やりが必要',emptyTitle:'植物がありません',emptySub:'最初の植物を追加してください。',addPlant:'植物を追加',stepSearch:'検索',stepSelect:'選択',stepConfigure:'設定',searchHint:'2文字以上入力…',back:'← 戻る',customName:'植物の名前',location:'場所（任意）',potSize:'鉢のサイズ',small:'小',medium:'中',large:'大',addPlantConfirm:'植物を追加',editPlant:'植物を編集',delete:'削除',save:'保存',watered:'水やり済み ✓',waterBtn:'💧 水やり',healthy:'健康',waterSoon:'もうすぐ水やり',needsWaterStatus:'水が必要',water:'水',locationLabel:'場所',noResults:'植物が見つかりません。',loading:'検索中…',toastWatered:'💧 水やりしました！',toastAdded:'🌱 植物を追加しました！',toastDeleted:'🗑 植物を削除しました。',toastSaved:'✓ 保存しました。',searchPlantAPI:'植物を検索…',noWaterInfo:'お手入れデータが見つかりません。独自の設定で追加できます。',createCustom:'+ カスタム植物を追加',wateringNeed:'水やりの必要量',waterLow:'少',waterMedium:'中',waterHigh:'多',recommended:'（おすすめ）',chooseWatering:'水やりの必要量を選択してください。',searchError:'データの読み込みに失敗しました。後でもう一度お試しください。' },
+  zh: { add:'添加植物',today:'今天・需要浇水',noWater:'所有植物都已照料好 🌿',searchPlants:'搜索植物…',all:'全部',needsWater:'需要浇水',emptyTitle:'还没有植物',emptySub:'添加您的第一株植物以开始。',addPlant:'添加植物',stepSearch:'搜索',stepSelect:'选择',stepConfigure:'配置',searchHint:'请输入至少2个字符…',back:'← 返回',customName:'我给这株植物起的名字',location:'位置（可选）',potSize:'花盆大小',small:'小',medium:'中',large:'大',addPlantConfirm:'添加植物',editPlant:'编辑植物',delete:'删除',save:'保存',watered:'已浇水 ✓',waterBtn:'💧 浇水',healthy:'健康',waterSoon:'即将浇水',needsWaterStatus:'需要浇水',water:'水',locationLabel:'位置',noResults:'未找到植物。',loading:'搜索中…',toastWatered:'💧 已浇水！',toastAdded:'🌱 植物已添加！',toastDeleted:'🗑 植物已删除。',toastSaved:'✓ 已保存。',searchPlantAPI:'搜索植物…',noWaterInfo:'未找到养护数据。您仍可以使用自己的设置添加。',createCustom:'+ 添加自定义植物',wateringNeed:'需水量',waterLow:'少',waterMedium:'中',waterHigh:'多',recommended:'（推荐）',chooseWatering:'请选择需水量。',searchError:'加载数据失败，请稍后重试。' },
 };
 
 /* ── App state ────────────────────────────────────────── */
@@ -122,8 +121,10 @@ let state = {
   filter: 'all',
   searchQuery: '',
   currentStep: 1,
-  selectedApiPlant: null,
+  selectedPlant: null,
+  searchResults: [],
   editingPlantId: null,
+  editingRecommended: null,
 };
 
 /* ── LocalStorage ─────────────────────────────────────── */
@@ -350,12 +351,113 @@ function waterPlant(id) {
   showToast(t('toastWatered'));
 }
 
+/* ── Plant catalog (data/plants.json) ─────────────────── */
+const CATALOG_URL  = 'data/plants.json';
+const RANK_ORDER   = { species: 0, genus: 1, family: 2 };
+const MAX_RESULTS  = 8;
+const WATER_LEVELS = ['low', 'medium', 'high'];
+const WATER_LABEL_KEYS = { low: 'waterLow', medium: 'waterMedium', high: 'waterHigh' };
+let catalogPromise = null;
+
+// Lowercase, ß→ss, strip accents, umlaut spellings (ü/ue→u), punctuation → space
+function normalizeTerm(str) {
+  return String(str).toLowerCase()
+    .replace(/ß/g, 'ss')
+    .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/ae/g, 'a').replace(/oe/g, 'o').replace(/ue/g, 'u')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+// Loaded once, then kept in memory with pre-normalized search keys
+function loadCatalog() {
+  if (!catalogPromise) {
+    catalogPromise = fetch(CATALOG_URL)
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then(data => data.plants.map(entry => ({
+        entry,
+        keys: [
+          entry.scientificName,
+          ...(entry.synonyms || []),
+          ...(entry.names.de || []),
+          ...(entry.names.en || []),
+        ].map(normalizeTerm),
+      })))
+      .catch(err => {
+        catalogPromise = null;
+        throw err;
+      });
+  }
+  return catalogPromise;
+}
+
+function matchScore(key, q) {
+  if (key === q) return 0;
+  if (key.startsWith(q)) return 1;
+  if (key.split(' ').some(word => word.startsWith(q))) return 2;
+  if (key.includes(q)) return 3;
+  return Infinity;
+}
+
+function searchIndex(index, q) {
+  if (q.length < 2) return [];
+  const hits = [];
+  for (const item of index) {
+    const score = Math.min(...item.keys.map(k => matchScore(k, q)));
+    if (score !== Infinity) hits.push({ entry: item.entry, score });
+  }
+  return hits
+    .sort((a, b) => a.score - b.score
+      || RANK_ORDER[a.entry.rank] - RANK_ORDER[b.entry.rank]
+      || a.entry.scientificName.localeCompare(b.entry.scientificName))
+    .slice(0, MAX_RESULTS)
+    .map(hit => hit.entry);
+}
+
+function searchCatalog(index, query) {
+  const q = normalizeTerm(query);
+  let hits = searchIndex(index, q);
+  // Unknown cultivar/species ("Philodendron Birkin") → fall back to the genus
+  if (!hits.length && q.includes(' ')) hits = searchIndex(index, q.split(' ')[0]);
+  return hits;
+}
+
+function catalogDisplayName(entry) {
+  const names = entry.names[state.lang] || entry.names.en || entry.names.de || [];
+  return names[0] || entry.scientificName;
+}
+
+function catalogToSelection(entry) {
+  return {
+    catalogId:      entry.id,
+    commonName:     catalogDisplayName(entry),
+    scientificName: entry.scientificName,
+    wateringNeed:   entry.wateringNeed,
+    lightNeed:      entry.lightNeed,
+  };
+}
+
+function renderWateringOptions(containerId, inputName, selected, recommended) {
+  document.getElementById(containerId).innerHTML = WATER_LEVELS.map(level => `
+    <label class="radio-option">
+      <input type="radio" name="${inputName}" value="${level}"${level === selected ? ' checked' : ''} />
+      <span>${esc(t(WATER_LABEL_KEYS[level]))}${level === recommended
+        ? ` <small class="recommended-tag">${esc(t('recommended'))}</small>` : ''}</span>
+    </label>`).join('');
+}
+
 /* ── Add plant modal ──────────────────────────────────── */
 let searchDebounce = null;
+let searchSeq = 0;
 
 function openAddModal() {
   state.currentStep = 1;
-  state.selectedApiPlant = null;
+  state.selectedPlant = null;
+  state.searchResults = [];
+  loadCatalog().catch(() => {}); // preload; errors are shown on search
   document.getElementById('api-search-input').value = '';
   document.getElementById('input-custom-name').value = '';
   document.getElementById('input-location').value = '';
@@ -384,71 +486,76 @@ function setStep(n) {
   });
 }
 
-/* API search (calls generate.py via /api/search) */
-async function doApiSearch(query) {
+/* Catalog search (data/plants.json) */
+async function doCatalogSearch(query) {
   const results = document.getElementById('search-results');
+  const seq = ++searchSeq;
+  state.searchResults = [];
+
   if (query.length < 2) {
     results.innerHTML = `<p class="search-hint">${t('searchHint')}</p>`;
     return;
   }
 
   results.innerHTML = `<p class="search-loader">${t('loading')}</p>`;
+  const customBtn = `
+    <div class="search-custom">
+      <button type="button" class="btn-ghost btn-sm" id="btn-custom-plant">${esc(t('createCustom'))}</button>
+    </div>`;
 
+  let index;
   try {
-    const res  = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-    const data = await res.json();
-
-    // API-Fehler (z.B. fehlender/ungültiger PERENUAL_API_KEY) von einem
-    // echten leeren Suchergebnis unterscheiden, statt beides als
-    // "keine Treffer" auszugeben.
-    if (!res.ok || data.error) {
-      results.innerHTML = `<p class="search-hint" style="color:var(--red-text)">${esc(data.error ? `${t('searchError')} (${data.error})` : t('searchError'))}</p>`;
-      console.error('API search error', res.status, data.error);
-      return;
-    }
-
-    if (!data.plants || data.plants.length === 0) {
-      results.innerHTML = `<p class="search-hint">${t('noResults')}</p>`;
-      return;
-    }
-
-    results.innerHTML = data.plants.map(plant => {
-      const thumb = plant.imageUrl
-        ? `<img class="result-thumb" src="${esc(plant.imageUrl)}" alt="" loading="lazy" />`
-        : `<div class="result-thumb-placeholder">🌿</div>`;
-      return `
-        <div class="search-result-item" data-plant='${JSON.stringify(plant).replace(/'/g, "&#39;")}'>
-          ${thumb}
-          <div class="result-info">
-            <div class="result-name">${esc(plant.commonName)}</div>
-            <div class="result-sci">${esc(plant.scientificName || '')}</div>
-          </div>
-          <span class="result-water-badge">${esc(plant.wateringNeed)}</span>
-        </div>`;
-    }).join('');
-
-    results.querySelectorAll('.search-result-item').forEach(item => {
-      item.addEventListener('click', () => selectApiPlant(
-        JSON.parse(item.getAttribute('data-plant').replace(/&#39;/g, "'"))
-      ));
-    });
-
-  } catch(err) {
-    results.innerHTML = `<p class="search-hint" style="color:var(--red-text)">${t('searchError')}</p>`;
-    console.error('API search error', err);
+    index = await loadCatalog();
+  } catch (err) {
+    if (seq !== searchSeq) return;
+    results.innerHTML = `<p class="search-hint" style="color:var(--red-text)">${t('searchError')}</p>${customBtn}`;
+    bindCustomPlantButton(query);
+    console.error('Catalog load error', err);
+    return;
   }
+  if (seq !== searchSeq) return; // a newer search has started
+
+  state.searchResults = searchCatalog(index, query).map(catalogToSelection);
+
+  if (!state.searchResults.length) {
+    results.innerHTML = `<p class="search-hint">${esc(t('noWaterInfo'))}</p>${customBtn}`;
+    bindCustomPlantButton(query);
+    return;
+  }
+
+  results.innerHTML = state.searchResults.map((plant, i) => `
+    <div class="search-result-item" data-index="${i}">
+      <div class="result-thumb-placeholder">🌿</div>
+      <div class="result-info">
+        <div class="result-name">${esc(plant.commonName)}</div>
+        <div class="result-sci">${esc(plant.scientificName)}</div>
+      </div>
+      <span class="result-water-badge">💧 ${esc(t(WATER_LABEL_KEYS[plant.wateringNeed]))}</span>
+    </div>`).join('') + customBtn;
+
+  results.querySelectorAll('.search-result-item').forEach(item => {
+    item.addEventListener('click', () =>
+      selectPlant(state.searchResults[Number(item.getAttribute('data-index'))]));
+  });
+  bindCustomPlantButton(query);
 }
 
-function selectApiPlant(plant) {
-  state.selectedApiPlant = plant;
+function bindCustomPlantButton(query) {
+  document.getElementById('btn-custom-plant').addEventListener('click', () => selectPlant({
+    catalogId:      null,
+    commonName:     query,
+    scientificName: '',
+    wateringNeed:   null,
+    lightNeed:      null,
+  }));
+}
+
+function selectPlant(plant) {
+  state.selectedPlant = plant;
 
   const preview = document.getElementById('selected-preview');
-  const imgHtml = plant.imageUrl
-    ? `<img src="${esc(plant.imageUrl)}" alt="" />`
-    : `<div style="width:56px;height:56px;background:var(--bg-3);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:28px">🌿</div>`;
-
   preview.innerHTML = `
-    ${imgHtml}
+    <div style="width:56px;height:56px;background:var(--bg-3);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:28px">🌿</div>
     <div class="selected-plant-info">
       <div class="name">${esc(plant.commonName)}</div>
       <div class="sci">${esc(plant.scientificName || '')}</div>
@@ -457,17 +564,30 @@ function selectApiPlant(plant) {
   // Pre-fill custom name with common name
   document.getElementById('input-custom-name').value = plant.commonName || '';
 
+  // Catalog value is preselected and marked; custom entries must choose explicitly
+  renderWateringOptions('water-need-group', 'water-need', plant.wateringNeed, plant.wateringNeed);
+  const hint = document.getElementById('water-need-hint');
+  hint.classList.toggle('hidden', !!plant.wateringNeed);
+  hint.classList.remove('form-hint--error');
+
   setStep(3);
 }
 
 function confirmAddPlant() {
-  const customName = document.getElementById('input-custom-name').value.trim();
-  const location   = document.getElementById('input-location').value.trim();
-  const potSize    = document.querySelector('input[name="pot-size"]:checked')?.value || 'medium';
-  const p          = state.selectedApiPlant;
+  const customName   = document.getElementById('input-custom-name').value.trim();
+  const location     = document.getElementById('input-location').value.trim();
+  const potSize      = document.querySelector('input[name="pot-size"]:checked')?.value || 'medium';
+  const wateringNeed = document.querySelector('input[name="water-need"]:checked')?.value;
+  const p            = state.selectedPlant;
 
   if (!customName) {
     document.getElementById('input-custom-name').focus();
+    return;
+  }
+  if (!wateringNeed) {
+    const hint = document.getElementById('water-need-hint');
+    hint.classList.remove('hidden');
+    hint.classList.add('form-hint--error');
     return;
   }
 
@@ -476,21 +596,18 @@ function confirmAddPlant() {
     customName,
     species:         p.commonName      || '',
     scientificName:  p.scientificName  || '',
-    imageUrl:        p.imageUrl        || null,
+    catalogId:       p.catalogId       || null,
+    imageUrl:        null,
     location:        location          || null,
-    wateringNeed:    p.wateringNeed    || 'medium',
+    wateringNeed,
+    // 'catalog' = recommended value kept, 'user' = own choice (custom entry or override)
+    wateringSource:  wateringNeed === p.wateringNeed ? 'catalog' : 'user',
     lightNeed:       p.lightNeed       || null,
     potSize,
     waterLevel:      100,
     lastWateredAt:   new Date().toISOString(),
     addedAt:         new Date().toISOString(),
     updatedAt:       new Date().toISOString(),
-    // optional enrichment
-    temperature:     p.temperature  || null,
-    humidity:        p.humidity     || null,
-    soilType:        p.soilType     || null,
-    growthRate:      p.growthRate   || null,
-    funFact:         p.funFact      || null,
   };
 
   state.plants.unshift(plant);
@@ -511,12 +628,26 @@ function openEditModal(id) {
   const ps = plant.potSize || 'medium';
   document.querySelector(`input[name="edit-pot-size"][value="${ps}"]`).checked = true;
 
+  // Render immediately, then mark the catalog recommendation once the catalog is loaded
+  state.editingRecommended = null;
+  renderWateringOptions('edit-water-need-group', 'edit-water-need', plant.wateringNeed || 'medium', null);
+  if (plant.catalogId) {
+    loadCatalog().then(index => {
+      const item = index.find(i => i.entry.id === plant.catalogId);
+      if (!item || state.editingPlantId !== id) return;
+      state.editingRecommended = item.entry.wateringNeed;
+      const current = document.querySelector('input[name="edit-water-need"]:checked')?.value;
+      renderWateringOptions('edit-water-need-group', 'edit-water-need', current, item.entry.wateringNeed);
+    }).catch(() => {});
+  }
+
   document.getElementById('edit-modal-backdrop').hidden = false;
 }
 
 function closeEditModal() {
   document.getElementById('edit-modal-backdrop').hidden = true;
   state.editingPlantId = null;
+  state.editingRecommended = null;
 }
 
 function saveEdit() {
@@ -525,6 +656,11 @@ function saveEdit() {
   plant.customName = document.getElementById('edit-custom-name').value.trim() || plant.customName;
   plant.location   = document.getElementById('edit-location').value.trim() || null;
   plant.potSize    = document.querySelector('input[name="edit-pot-size"]:checked')?.value || 'medium';
+  const wateringNeed = document.querySelector('input[name="edit-water-need"]:checked')?.value;
+  if (wateringNeed && wateringNeed !== plant.wateringNeed) {
+    plant.wateringNeed   = wateringNeed;
+    plant.wateringSource = wateringNeed === state.editingRecommended ? 'catalog' : 'user';
+  }
   plant.updatedAt  = new Date().toISOString();
   saveToStorage();
   closeEditModal();
@@ -581,10 +717,10 @@ function bindEvents() {
     if (e.target === e.currentTarget) closeAddModal();
   });
 
-  // API search debounce
+  // Catalog search debounce
   document.getElementById('api-search-input').addEventListener('input', e => {
     clearTimeout(searchDebounce);
-    searchDebounce = setTimeout(() => doApiSearch(e.target.value.trim()), 400);
+    searchDebounce = setTimeout(() => doCatalogSearch(e.target.value.trim()), 150);
   });
 
   // Back buttons

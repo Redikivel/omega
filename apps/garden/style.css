@@ -916,6 +916,32 @@ body {
   color: var(--green-text);
 }
 
+#water-need-group,
+#edit-water-need-group { flex-wrap: wrap; }
+#water-need-group .radio-option,
+#edit-water-need-group .radio-option { min-width: 90px; text-align: center; }
+
+.recommended-tag {
+  display: block;
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+}
+.radio-option:has(input:checked) .recommended-tag { color: var(--green-text); }
+
+.form-hint {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.form-hint--error { color: var(--red-text); }
+
+.search-custom {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 4px;
+}
+
 .modal-footer {
   display: flex;
   justify-content: space-between;
