@@ -52,9 +52,12 @@ Eine Zeile pro Eintrag, damit Git-Diffs lesbar bleiben.
   derzeit nicht verwendet; geplant ist später eine optionale KI-Suche.
 - **Empfehlung:** Bei Katalogtreffern ist der Katalogwert vorausgewählt und mit
   „(empfohlen)" markiert, bleibt aber änderbar (auch im Bearbeiten-Dialog).
-- **Referenz:** gespeicherte Pflanzen speichern `catalogId` (= `id`) und
-  `wateringSource` (`catalog` = Empfehlung übernommen, `user` = eigene Wahl),
-  damit Katalogkorrekturen und Sensor-Schwellwerte zugeordnet werden können.
+- **Referenz:** gespeicherte Pflanzen speichern `catalogId` (= `id`),
+  `wateringSource` und `lightSource` (`catalog` = Empfehlung übernommen,
+  `user` = eigene Wahl, `null` = nicht gesetzt). Katalogfakten wie `family`,
+  `environment` und `winterRest` werden in der Detailansicht über `catalogId`
+  nachgeschlagen statt kopiert, damit Katalogkorrekturen und
+  Sensor-Schwellwerte zugeordnet werden können.
 
 ## Zukunft (Sensoren / Datenbank)
 
