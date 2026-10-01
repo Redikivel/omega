@@ -133,6 +133,19 @@ let state = {
 const STORAGE_KEY    = 'omega_garden_v1';
 const BACKUP_KEY     = 'omega_garden_v1_backup';
 const SCHEMA_VERSION = 2;
+// Written by the Omega hub and every app, so one language choice applies everywhere
+const SHARED_LANG_KEY = 'omega_lang';
+
+function readSharedLang() {
+  try {
+    const lang = localStorage.getItem(SHARED_LANG_KEY);
+    return lang && TRANSLATIONS[lang] ? lang : null;
+  } catch(_) { return null; }
+}
+
+function writeSharedLang(lang) {
+  try { localStorage.setItem(SHARED_LANG_KEY, lang); } catch(_) {}
+}
 
 function loadFromStorage() {
   let raw = null;
@@ -978,6 +991,7 @@ function bindEvents() {
   // Language
   document.getElementById('lang-select').addEventListener('change', e => {
     state.lang = e.target.value;
+    writeSharedLang(state.lang);
     saveToStorage();
     renderAll();
   });
@@ -1057,6 +1071,9 @@ function bindEvents() {
 /* ── Init ────────────────────────────────────────────── */
 function init() {
   loadFromStorage();
+  // The shared choice is newer than Garden's own copy whenever the user
+  // switched language in the hub or another app since the last visit
+  state.lang = readSharedLang() || state.lang;
   bindEvents();
   renderAll();
 
