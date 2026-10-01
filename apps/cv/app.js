@@ -280,12 +280,28 @@ generateBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", clearInput);
 copyBtn.addEventListener("click", copyResult);
 
+// Shared with the Omega hub and the other apps, so one language choice applies everywhere
+const SHARED_LANG_KEY = "omega_lang";
+
+function readSharedLang() {
+  try {
+    const lang = localStorage.getItem(SHARED_LANG_KEY);
+    return lang && [...langSelect.options].some((o) => o.value === lang) ? lang : null;
+  } catch {
+    return null;
+  }
+}
+
 langSelect.addEventListener("change", (event) => {
+  try { localStorage.setItem(SHARED_LANG_KEY, event.target.value); } catch {}
   setLanguage(event.target.value);
 });
 
 (async function init() {
   updateCounter();
+
+  const sharedLang = readSharedLang();
+  if (sharedLang) langSelect.value = sharedLang;
 
   try {
     await setLanguage(langSelect.value || "en");
