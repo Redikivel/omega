@@ -38,9 +38,12 @@ Applies strategic thinking and problem-solving skills developed through interact
 
 ## Setup
 
-1. Create a Gemini API key  
-2. Add it in Vercel
-3. Deploy the repo on Vercel
+Omega CV is deployed as part of the Omega hub (see the root `README.md`) and is served under `/cv/`.
+Its serverless function lives in the repository root at `api/generate.py`, because Vercel only detects functions there.
+
+1. Create a Gemini API key
+2. Add it as `GEMINI_API_KEY` to the environment variables of the hub's Vercel project
+3. Optional: set `GEMINI_MODEL` (default `gemini-2.5-flash`)
 
 ---
 

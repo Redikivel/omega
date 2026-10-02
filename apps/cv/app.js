@@ -172,7 +172,8 @@ async function generateAbility() {
 }
 
 async function generateAbilityApi(input, language, signal) {
-  const response = await fetch("/api/generate", {
+  // Trailing slash matches vercel.json "trailingSlash": true and avoids a 308 round-trip
+  const response = await fetch("/api/generate/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
