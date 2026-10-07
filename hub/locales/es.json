@@ -27,5 +27,9 @@
   "notFoundTitle": "Página no encontrada – Omega",
   "notFoundError": "No existe el archivo o el directorio",
   "notFoundText": "Esta página no existe (todavía).",
-  "notFoundHome": "Volver al inicio"
+  "notFoundHome": "Volver al inicio",
+  "imprintTitle": "Aviso legal ? Omega",
+  "privacyTitle": "Pol?tica de privacidad ? Omega",
+  "termsTitle": "Condiciones de uso ? Omega",
+  "legalGermanOnly": "Esta p?gina solo est? disponible en alem?n, que es la versi?n jur?dicamente vinculante."
 }

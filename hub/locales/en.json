@@ -27,5 +27,9 @@
   "notFoundTitle": "Page not found – Omega",
   "notFoundError": "No such file or directory",
   "notFoundText": "This page doesn't exist (yet).",
-  "notFoundHome": "Back to home"
+  "notFoundHome": "Back to home",
+  "imprintTitle": "Legal notice ? Omega",
+  "privacyTitle": "Privacy policy ? Omega",
+  "termsTitle": "Terms of use ? Omega",
+  "legalGermanOnly": "This page is only available in German, which is the legally binding version."
 }
