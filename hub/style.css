@@ -587,6 +587,56 @@ a { color: inherit; }
   color: var(--text);
 }
 
+/* ── About page ─────────────────────────────────────── */
+.about {
+  max-width: 760px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.about-title {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5vw, 38px);
+  letter-spacing: -0.5px;
+}
+
+.about-lead {
+  margin: 0;
+  font-size: clamp(17px, 2.4vw, 20px);
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.about-section { margin-top: 36px; }
+
+.about-section h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.about-section p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.about-section a {
+  color: var(--text);
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+.about-projects { padding-top: 36px; }
+.about-projects .section-head,
+.about-projects .project-grid { max-width: none; }
+
+.nav-link[aria-current="page"] { color: var(--text); }
+
+@media (max-width: 640px) {
+  .about-projects .project-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Footer (same structure as Omega CV / Garden, neutral) ── */
 .site-footer {
   width: 100%;
