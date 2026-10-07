@@ -10,6 +10,7 @@ Monorepo for the Omega ecosystem. Everything is deployed as **one** Vercel proje
 | `api/` | Serverless Python functions (Vercel only detects them in the root) | `/api/<name>/` |
 | `shared/` | Assets shared across the hub and apps | `/shared/` |
 | `impressum/`, `privacy/`, `terms/` | Legal pages (German, legally binding) | `/impressum/`, `/privacy/`, `/terms/` |
+| `about/` | About page (texts live in `hub/locales/*.json`, keys `about*`) | `/about/` |
 
 Routing is defined in `vercel.json`. `trailingSlash: true` is required because the apps use relative asset paths.
 
