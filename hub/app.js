@@ -1,5 +1,5 @@
 /* Omega hub – language handling and the terminal banner.
-   Shared by index.html and 404.html. */
+   Shared by index.html, 404.html and the legal pages. */
 
 const SUPPORTED_LANGS = ['de', 'en', 'fr', 'es', 'pt', 'zh'];
 const FALLBACK_LANG   = 'en';
@@ -61,6 +61,9 @@ function applyI18n() {
 
   const select = document.getElementById('lang-select');
   if (select) select.value = currentLang;
+
+  // Legal texts exist only in German; tell everyone else why
+  document.querySelectorAll('.legal-notice').forEach(n => { n.hidden = currentLang === 'de'; });
 }
 
 async function setLanguage(lang, { animate = false } = {}) {

@@ -523,6 +523,70 @@ a { color: inherit; }
   border-color: rgba(255, 255, 255, 0.26);
 }
 
+/* ── Legal pages (Impressum, Datenschutz, Nutzungsbedingungen) ── */
+.legal {
+  max-width: 780px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.legal-notice {
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line-2);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.legal-title {
+  margin: 0 0 6px;
+  font-size: clamp(28px, 5vw, 38px);
+  letter-spacing: -0.5px;
+}
+
+.legal-updated {
+  margin: 0 0 8px;
+  color: var(--muted2);
+  font-size: 14px;
+}
+
+.legal-body section { margin-top: 32px; }
+
+.legal-body h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.legal-body p,
+.legal-body li {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.legal-body p { margin: 0 0 12px; }
+.legal-body ul { margin: 0 0 12px; padding-left: 20px; }
+.legal-body li + li { margin-top: 6px; }
+.legal-body strong { color: var(--text); }
+
+.legal-body a {
+  color: var(--text);
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+.legal-body code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
 /* ── Footer (same structure as Omega CV / Garden, neutral) ── */
 .site-footer {
   width: 100%;
